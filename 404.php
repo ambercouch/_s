@@ -4,53 +4,53 @@
  *
  * @package _s
  */
+get_header();
+?>
+<div class="content">
+  <main id="primary" class="content__main" role="main">
+    <div class="main">
+      <section class="error-404 not-found">
+        <header class="main__header--404">
+          <h1 class="main__header--404__title"><?php _e('Oops! That page can&rsquo;t be found.', '_s'); ?></h1>
+        </header><!-- .page-header -->
 
-get_header(); ?>
+        <div class="page--404">
+          <p><?php _e('It looks like nothing was found at this location. Maybe try one of the links below or a search?', '_s'); ?></p>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+          <?php get_search_form(); ?>
 
-			<section class="error-404 not-found">
-				<header class="page-header">
-					<h1 class="page-title"><?php _e( 'Oops! That page can&rsquo;t be found.', '_s' ); ?></h1>
-				</header><!-- .page-header -->
+          <?php the_widget('WP_Widget_Recent_Posts'); ?>
 
-				<div class="page-content">
-					<p><?php _e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', '_s' ); ?></p>
+          <?php if (_s_categorized_blog()) : // Only show the widget if site has multiple categories.  ?>
+            <div class="widget widget_categories">
+              <h2 class="widget__title"><?php _e('Most Used Categories', '_s'); ?></h2>
+              <ul>
+                <?php
+                wp_list_categories(array(
+                    'orderby' => 'count',
+                    'order' => 'DESC',
+                    'show_count' => 1,
+                    'title_li' => '',
+                    'number' => 10,
+                ));
+                ?>
+              </ul>
+            </div><!-- .widget -->
+          <?php endif; ?>
 
-					<?php get_search_form(); ?>
+          <?php
+          /* translators: %1$s: smiley */
+          $archive_content = '<p>' . sprintf(__('Try looking in the monthly archives. %1$s', '_s'), convert_smilies(':)')) . '</p>';
+          the_widget('WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$archive_content");
+          ?>
 
-					<?php the_widget( 'WP_Widget_Recent_Posts' ); ?>
+          <?php the_widget('WP_Widget_Tag_Cloud'); ?>
 
-					<?php if ( _s_categorized_blog() ) : // Only show the widget if site has multiple categories. ?>
-					<div class="widget widget_categories">
-						<h2 class="widget-title"><?php _e( 'Most Used Categories', '_s' ); ?></h2>
-						<ul>
-						<?php
-							wp_list_categories( array(
-								'orderby'    => 'count',
-								'order'      => 'DESC',
-								'show_count' => 1,
-								'title_li'   => '',
-								'number'     => 10,
-							) );
-						?>
-						</ul>
-					</div><!-- .widget -->
-					<?php endif; ?>
+        </div><!-- .page-content -->
+      </section><!-- .error-404 -->
 
-					<?php
-						/* translators: %1$s: smiley */
-						$archive_content = '<p>' . sprintf( __( 'Try looking in the monthly archives. %1$s', '_s' ), convert_smilies( ':)' ) ) . '</p>';
-						the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$archive_content" );
-					?>
-
-					<?php the_widget( 'WP_Widget_Tag_Cloud' ); ?>
-
-				</div><!-- .page-content -->
-			</section><!-- .error-404 -->
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
+    </div><!-- .main -->
+  </main><!-- #primary -->
+</div><!-- .content -->
 
 <?php get_footer(); ?>

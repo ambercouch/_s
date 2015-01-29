@@ -4,29 +4,30 @@
  *
  * @package _s
  */
+get_header();
+?>
+<div class="content" >
+  <main id="primary" class="content__main" role="main">
+    <div class="main">
+      <?php while (have_posts()) : the_post(); ?>
 
-get_header(); ?>
+        <?php get_template_part('template_parts/content', 'single'); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+        <?php the_post_navigation(); ?>
 
-		<?php while ( have_posts() ) : the_post(); ?>
+        <?php
+        // If comments are open or we have at least one comment, load up the comment template
+        if (comments_open() || get_comments_number()) :
+          comments_template();
+        endif;
+        ?>
 
-			<?php get_template_part( 'content', 'single' ); ?>
+      <?php endwhile; // end of the loop. ?>
+    </div><!-- .main -->
+  </main><!-- #main -->
 
-			<?php the_post_navigation(); ?>
+  <?php get_sidebar(); ?>
 
-			<?php
-				// If comments are open or we have at least one comment, load up the comment template
-				if ( comments_open() || get_comments_number() ) :
-					comments_template();
-				endif;
-			?>
+</div><!-- .content -->
 
-		<?php endwhile; // end of the loop. ?>
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
-
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>
