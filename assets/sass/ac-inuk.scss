@@ -1,0 +1,43 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 29-Jan-2015, 21:54:36
+    Author     : Richard
+*/
+
+@import "../vendor/inuit-defaults/settings.defaults";
+@import "var/settings.colours";
+@import "../vendor/inuit-responsive-settings/settings.responsive";
+@import "var/settings.responsive";
+
+@import "bower_components/inuit-functions/tools.functions";
+@import "bower_components/inuit-mixins/tools.mixins";
+@import "bower_components/inuit-responsive-tools/tools.responsive";
+//@import "tools.aliases";
+
+@import "bower_components/inuit-normalize/generic.normalize";
+@import "bower_components/inuit-box-sizing/generic.box-sizing";
+@import "bower_components/inuit-shared/generic.shared";
+
+@import "bower_components/inuit-page/base.page";
+@import "bower_components/inuit-headings/base.headings";
+//@import "base.links";
+//@import "base.quotes";
+
+@import "bower_components/inuit-buttons/objects.buttons";
+@import "bower_components/inuit-layout/objects.layout";
+@import "bower_components/inuit-media/objects.media";
+
+//@import "components.page-head";
+//@import "components.page-foot";
+//@import "components.site-nav";
+//@import "components.ads";
+//@import "components.promo";
+
+@import "bower_components/inuit-widths/trumps.widths";
+@import "bower_components/inuit-widths/trumps.widths-reponsive";
+@import "bower_components/inuit-spacing/trumps.spacing";
+
