@@ -1,0 +1,26 @@
+{
+  "name": "acinuk",
+  "version": "0.2",
+  "homepage": "https://github.com/Automattic/_s",
+  "authors": [
+    "Richiearnold <richard@ambercouch.co.uk>"
+  ],
+  "description": "wp theme",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "assets/vendor",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "inuit-shared": "~0.1.3",
+    "inuit-responsive-tools": "~0.1.3",
+    "inuit-spacing-responsive": "~0.0.4",
+    "inuit-starter-kit": "~0.2.8",
+    "inuit-widths-responsive": "~0.1.3"
+  }
+}
