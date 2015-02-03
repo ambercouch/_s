@@ -6,7 +6,7 @@ module.exports = function (grunt) {
     watch: {
       css: {
         files: 'assets/scss/**/*.scss',
-        tasks: ['compass'],
+        tasks: ['sass'],
         options: {
           livereload: true
         }
@@ -16,13 +16,15 @@ module.exports = function (grunt) {
         tasks: ['svgstore']
       }
     },
-    compass: {
-      dist: {
+    sass: {
         options: {
-          sassDir: 'assets/scss',
-          cssDir: 'assets/css'
+            sourceMap: true
+        },
+        dist: {
+            files: {
+                'assets/css/main.css': 'assets/scss/main.scss'
+            }
         }
-      }
     },
     cssmin: {
       build: {
@@ -48,17 +50,6 @@ module.exports = function (grunt) {
         dest: 'assets/js/script.js'
       }
     },
-    sass: {// Task
-      dist: {// Target
-        options: {// Target options
-          style: 'expanded'
-        },
-        files: {// Dictionary of files
-          'assets/css/style.css': 'assets/scss/style.scss'      // 'destination': 'source'
-
-        }
-      }
-    }, //sass
     svgstore: {
       options: {
         svg: {
@@ -84,13 +75,12 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
-  grunt.loadNpmTasks('grunt-contrib-sass');
-  grunt.loadNpmTasks('grunt-contrib-compass');
+  grunt.loadNpmTasks('grunt-sass');
   grunt.loadNpmTasks('grunt-autoprefixer');
   grunt.loadNpmTasks('grunt-svgstore');
 
 
   // 4. Where we tell Grunt what to do when we type "grunt" into the terminal.
-  grunt.registerTask('default', ['compass', 'autoprefixer', 'cssmin']);
+  grunt.registerTask('default', ['sass', 'autoprefixer', 'cssmin']);
 
 };
