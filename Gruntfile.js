@@ -6,7 +6,7 @@ module.exports = function (grunt) {
     watch: {
       css: {
         files: 'assets/scss/**/*.scss',
-        tasks: ['sass'],
+        tasks: ['sass', 'autoprefixer', 'cssmin', 'concat'],
         options: {
           livereload: true
         }
@@ -29,7 +29,7 @@ module.exports = function (grunt) {
     cssmin: {
       build: {
         files: {
-          'assets/css/style.css': ['assets/css/style.css']
+          'assets/css/main.css': ['assets/css/main.css']
         }
       }
     },
@@ -43,11 +43,11 @@ module.exports = function (grunt) {
     },
     concat: {
       options: {
-        separator: ';'
+        separator: ''
       },
       dist: {
-        src: ['assets/vendor/jquery/dist/jquery.min.js'],
-        dest: 'assets/js/script.js'
+        src: ['assets/css/style.css','assets/css/main.css'],
+        dest: 'style.css'
       }
     },
     svgstore: {
@@ -81,6 +81,6 @@ module.exports = function (grunt) {
 
 
   // 4. Where we tell Grunt what to do when we type "grunt" into the terminal.
-  grunt.registerTask('default', ['sass', 'autoprefixer', 'cssmin']);
+  grunt.registerTask('default', ['sass', 'autoprefixer', 'cssmin', 'concat']);
 
 };

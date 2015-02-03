@@ -30,6 +30,9 @@ and open the template in the editor.
 @import "../vendor/inuit-layout/objects.layout";
 @import "../vendor/inuit-media/objects.media";
 
+@import "helpers";
+@import "ui/accessibility";
+
 //@import "components.page-head";
 //@import "components.page-foot";
 //@import "components.site-nav";
