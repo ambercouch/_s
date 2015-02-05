@@ -31,7 +31,11 @@ and open the template in the editor.
 @import "../vendor/inuit-media/objects.media";
 
 @import "helpers";
+@import "ui/modules/placeholders/responsive-toggle";
+@import "ui/modules/navigation";
 @import "ui/accessibility";
+
+
 
 //@import "components.page-head";
 //@import "components.page-foot";

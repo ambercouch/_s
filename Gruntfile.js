@@ -6,7 +6,7 @@ module.exports = function (grunt) {
     watch: {
       css: {
         files: 'assets/scss/**/*.scss',
-        tasks: ['sass', 'autoprefixer', 'cssmin', 'concat'],
+        tasks: ['sass', 'autoprefixer', 'concat'],
         options: {
           livereload: true
         }
@@ -18,18 +18,19 @@ module.exports = function (grunt) {
     },
     sass: {
         options: {
-            sourceMap: true
+            sourceMap: true,
+            outputStyle: 'compressed'
         },
         dist: {
             files: {
-                'assets/css/main.css': 'assets/scss/main.scss'
+                'style.css': 'assets/scss/main.scss'
             }
         }
     },
     cssmin: {
       build: {
         files: {
-          'assets/css/main.css': ['assets/css/main.css']
+          'style.css': ['style.css']
         }
       }
     },
@@ -46,7 +47,7 @@ module.exports = function (grunt) {
         separator: ''
       },
       dist: {
-        src: ['assets/css/style.css','assets/css/main.css'],
+        src: ['assets/css/style.css','style.css'],
         dest: 'style.css'
       }
     },
@@ -62,7 +63,7 @@ module.exports = function (grunt) {
       },
       default: {
         files: {
-          'assets/images/defs.svg': ['assets/images/svg/*.svg'],
+          'assets/images/defs.svg': ['assets/images/svg/*.svg']
         }
         //your_target: {
 
@@ -81,6 +82,6 @@ module.exports = function (grunt) {
 
 
   // 4. Where we tell Grunt what to do when we type "grunt" into the terminal.
-  grunt.registerTask('default', ['sass', 'autoprefixer', 'cssmin', 'concat']);
+  grunt.registerTask('default', ['sass', 'autoprefixer', 'concat']);
 
 };
