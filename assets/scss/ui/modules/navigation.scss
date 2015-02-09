@@ -13,4 +13,8 @@ and open the template in the editor.
 }
 .navigation--main__menu{
   @extend %responsive-menu__container;
+  @extend %nav;
+  @extend %nav--block;
+  
+  
 }

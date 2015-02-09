@@ -57,25 +57,19 @@ and open the template in the editor.
   &[aria-expanded="true"]{
     max-height: 30em;
   }
-  > ul{
-
-    @extend .nav--stacked;
-    border-top: 1px solid #808080;
-    @include media-query(desk){
-      border-top: none;
-    }
-    > .menu-item{
-      @include media-query(desk){
-        display: inline-block;
+  > li{
+     @include media-query(portable){
+       display: block !important;
+     }
+     @include media-query(desk){
+       display: inline-block;
+     }
+     a{
+       padding: 0.8em;
+       //border-bottom: 1px solid #808080;
+       @include media-query(desk){
+         //border-bottom: none;
+       }
       }
-      a{
-        padding: 0.8em;
-        //border-bottom: 1px solid #808080;
-        @include media-query(desk){
-          //border-bottom: none;
-        }
-
-      }
-    }
-  }
+    } 
 }
