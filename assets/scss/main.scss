@@ -30,10 +30,12 @@ and open the template in the editor.
 @import "../vendor/inuit-layout/objects.layout";
 @import "../vendor/inuit-media/objects.media";
 
+@import "mixins";
 @import "helpers";
 @import "ui/modules/placeholders/responsive-toggle";
 @import "ui/modules/placeholders/nav";
 @import "ui/modules/navigation";
+@import "ui/modules/content";
 @import "ui/accessibility";
 
 
@@ -43,7 +45,7 @@ and open the template in the editor.
 //@import "components.site-nav";
 //@import "components.ads";
 //@import "components.promo";
-
+@import "var/settings.widths";
 @import "../vendor/inuit-widths/trumps.widths";
 @import "../vendor/inuit-widths-responsive/trumps.widths-responsive";
 @import "../vendor/inuit-spacing/trumps.spacing";
