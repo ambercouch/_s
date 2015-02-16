@@ -1,0 +1,14 @@
+.content{
+  @extend %layout;
+  @include x-rem(font-size, 0);
+}
+.content__main{
+  @extend %layout__item;
+  @extend .lap-and-up-four-fifths;
+  @include x-rem(font-size, 1);
+}
+.content__widget-area{
+  @extend %layout__item;
+  @extend .lap-and-up-one-fifth;
+  @include x-rem(font-size, 1);
+}
