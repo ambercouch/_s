@@ -32,8 +32,11 @@ and open the template in the editor.
 
 @import "mixins";
 @import "helpers";
+@import "var/settings.container";
+@import "ui/modules/placeholders/container";
 @import "ui/modules/placeholders/responsive-toggle";
 @import "ui/modules/placeholders/nav";
+@import "ui/modules/site";
 @import "ui/modules/navigation";
 @import "ui/modules/content";
 @import "ui/accessibility";
