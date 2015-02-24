@@ -8,6 +8,8 @@
 /**
  * Set the content width.
  */
+require get_template_directory() . '/lib/settings.php';
+
 require get_template_directory() . '/lib/content-width.php';
 
 require get_template_directory() . '/lib/theme-setup.php';
@@ -17,6 +19,8 @@ require get_template_directory() . '/lib/widget-areas.php';
 require get_template_directory() . '/lib/enqueue.php';
 
 require get_template_directory() . '/lib/body-data.php';
+
+require get_template_directory() . '/lib/wp_foot.php';
 
 
 
