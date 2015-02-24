@@ -4,7 +4,9 @@
  * Enqueue scripts and styles.
  */
 function _s_scripts() {
-  wp_enqueue_style('_s-style', get_stylesheet_uri());
+  if (CSS_AT_BOTTOM !== TRUE) {
+    wp_enqueue_style('_s-style', get_stylesheet_uri());
+  }
 
   wp_enqueue_script('_s-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true);
 
