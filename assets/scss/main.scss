@@ -3,12 +3,14 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 */
-/* 
+/*
     Created on : 29-Jan-2015, 21:54:36
     Author     : Richard
 */
 @import "../vendor/inuit-defaults/settings.defaults";
 @import "var/settings.colours";
+@import "var/settings.fonts";
+@import "../vendor/inuit-page/base.page";
 @import "../vendor/inuit-responsive-settings/settings.responsive";
 @import "var/settings.responsive";
 
@@ -23,7 +25,7 @@ and open the template in the editor.
 
 @import "../vendor/inuit-page/base.page";
 @import "../vendor/inuit-headings/base.headings";
-//@import "base.links";
+@import "base/html";
 //@import "base.quotes";
 
 @import "../vendor/inuit-buttons/objects.buttons";
@@ -32,10 +34,14 @@ and open the template in the editor.
 
 @import "mixins";
 @import "helpers";
+@import "var/settings.typography";
+@import "base/typography";
+@import "typography";
 @import "var/settings.container";
 @import "ui/modules/placeholders/container";
 @import "ui/modules/placeholders/responsive-toggle";
 @import "ui/modules/placeholders/nav";
+@import "ui/modules/placeholders/title";
 @import "ui/modules/site";
 @import "ui/modules/navigation";
 @import "ui/modules/content";
