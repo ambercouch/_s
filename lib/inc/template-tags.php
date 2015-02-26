@@ -76,7 +76,7 @@ if (!function_exists('_s_posted_on')) :
   function _s_posted_on() {
     $time_string = '<time class="post__date published updated" datetime="%1$s">%2$s</time>';
     if (get_the_time('U') !== get_the_modified_time('U')) {
-      $time_string = '<time class="post__date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
+      $time_string = '<time class="post__date post__published" datetime="%1$s">%2$s</time><time class="post__updated" datetime="%3$s">%4$s</time>';
     }
 
     $time_string = sprintf($time_string, esc_attr(get_the_date('c')), esc_html(get_the_date()), esc_attr(get_the_modified_date('c')), esc_html(get_the_modified_date())
@@ -374,6 +374,8 @@ if (!function_exists('_s_comment')) :
           'comment_notes_before' => $comment_notes_before,
           'comment_notes_after' => $comment_notes_after);
     }
+
+
 
 
 
