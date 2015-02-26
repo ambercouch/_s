@@ -4,27 +4,29 @@
  */
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-  <header class="post__header">
-    <?php the_title(sprintf('<h1 class="post__title"><a href="%s" rel="bookmark">', esc_url(get_permalink())), '</a></h1>'); ?>
+<article id="post-<?php the_ID(); ?>" <?php post_class('post--audio'); ?>>
+  <header class="post--audio__header">
+    <?php the_title(sprintf('<h1 class="post--audio__title"><a href="%s" rel="bookmark">', esc_url(get_permalink())), '</a></h1>'); ?>
 
     <?php if ('post' == get_post_type()) : ?>
-      <div class="post__meta">
+      <div class="post--audio__meta">
         <?php _s_posted_on(); ?>
       </div><!-- .post__meta -->
     <?php endif; ?>
   </header><!-- .post__header -->
 
-  <div class="post__content post__content--audio">
+  <div class="post--audio__content">
     <?php
     /* translators: %s: Name of current post */
     the_content(sprintf(
                     __('Continue reading %s <span class="meta-nav">&rarr;</span>', '_s'), the_title('<span class="screen-reader-text">"', '"</span>', false)
     ));
     ?>
-    <?php if (the_field('review')) : ?>
-      <div class="post__content--audio__review">
-        <?php echo the_field('review'); ?>
+    <?php if (get_field('review') != '') : ?>
+      <div class="post--audio__review">
+        <div class="review">
+          <?php echo the_field('review'); ?>
+        </div>
       </div>
     <?php endif ?>
     <?php
@@ -35,7 +37,7 @@
     ?>
   </div><!-- .post__content -->
 
-  <footer class="post__footer">
+  <footer class="post--audio__footer">
     <?php _s_entry_footer(); ?>
-  </footer><!-- .entry-footer -->
+  </footer><!-- .post--audio__footer -->
 </article><!-- #post-## -->
