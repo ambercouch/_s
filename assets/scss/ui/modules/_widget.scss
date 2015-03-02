@@ -1,0 +1,19 @@
+/*
+ * Global styles for widgets
+ */
+
+.widget{
+  ul{
+    margin-top:0;
+    padding-left: 0;
+  }
+  li{
+    list-style: none;
+  }
+}
+
+.widget__title{
+  @extend .epsilon;
+  margin-bottom: 1rem;
+  margin-top: 0;
+}
