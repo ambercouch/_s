@@ -27,9 +27,15 @@
 .post--audio__header{
   @extend .post__header;
 }
+.post--audio__meta{
+  @extend %milli;
+}
 .post--audio__title{
   @extend .post__title;
   //%post--tile
   margin-top: 0;
+}
+.post--audio__footer{
+   @extend %milli;
 }
 
