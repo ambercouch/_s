@@ -29,6 +29,7 @@ and open the template in the editor.
 //@import "base.quotes";
 
 @import "../vendor/inuit-buttons/objects.buttons";
+@import "var/settings.layout";
 @import "../vendor/inuit-layout/objects.layout";
 @import "../vendor/inuit-media/objects.media";
 
@@ -43,8 +44,12 @@ and open the template in the editor.
 @import "ui/modules/placeholders/nav";
 @import "ui/modules/placeholders/title";
 @import "ui/modules/site";
+@import "ui/modules/branding";
+@import "ui/modules/page";
 @import "ui/modules/navigation";
 @import "ui/modules/content";
+@import "ui/modules/page";
+
 @import "ui/accessibility";
 
 
