@@ -1,16 +1,21 @@
 .site__header{
-  @extend %container;
+
 }
 .site__navigation{
+
+}
+.site__branding{
   @extend %container;
+  @extend %layout--rev;
+  @include x-rem(font-size, 0);
 }
 .site__content{
-  @extend %container;
+
 }
 .site__subsidiary{
-  @extend %container;
+
 }
 .site__footer{
-  @extend %container;
+
 }
 

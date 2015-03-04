@@ -1,5 +1,6 @@
 .content{
-  @extend %layout;
+  @extend %container;
+  @extend %layout--rev;
   @include x-rem(font-size, 0);
 }
 .content__main{
