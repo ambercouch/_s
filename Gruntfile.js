@@ -35,12 +35,11 @@ module.exports = function (grunt) {
       }
     },
     autoprefixer: {
-      build: {
-        expand: true,
-        cwd: 'assets/css',
-        src: ['**/*.css'],
-        dest: 'assets/css'
-      }
+      options: {
+        map: true
+      },
+      src: 'style.css',
+     dest: 'style.css'
     },
     concat: {
       options: {
@@ -82,6 +81,6 @@ module.exports = function (grunt) {
 
 
   // 4. Where we tell Grunt what to do when we type "grunt" into the terminal.
-  grunt.registerTask('default', ['sass', 'autoprefixer', 'concat']);
+  grunt.registerTask('default', ['sass', 'autoprefixer']);
 
 };
