@@ -6,7 +6,7 @@ module.exports = function (grunt) {
     watch: {
       css: {
         files: 'assets/scss/**/*.scss',
-        tasks: ['sass', 'autoprefixer', 'concat'],
+        tasks: ['sass', 'autoprefixer'],
         options: {
           livereload: true
         }
