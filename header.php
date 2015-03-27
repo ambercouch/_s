@@ -47,13 +47,16 @@
     <div id="page" class="hfeed site">
       <a class="skip-link screen-reader-text" href="#content"><?php _e('Skip to content', '_s'); ?></a>
 
-      <header id="masthead" class="site__header" role="banner">
-        <div class="site__branding">
-          <div class="branding">
-            <h1 class="branding__title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a></h1>
-            <h2 class="branding__description"><?php bloginfo('description'); ?></h2>
-          </div><!-- .branding -->
-        </div><!-- .site-branding -->
+      <header id="masthead" class="site__master-header" role="banner">
+        <div class="master-header">
+          <div class="master-header__branding">
+            <div class="branding">
+              <h1 class="branding__title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a></h1>
+              <h2 class="branding__description"><?php bloginfo('description'); ?></h2>
+            </div><!-- .branding -->
+          </div><!-- .master-header__branding -->
+          <?php get_template_part('template_parts/sidebar--header'); ?>
+        </div><!-- .master-header -->
       </header><!-- #masthead -->
       <nav id="main-navigation" class="site__navigation" role="navigation">
         <div class="navigation--main">
