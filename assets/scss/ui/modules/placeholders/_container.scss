@@ -3,7 +3,7 @@
   margin: 0 auto;
   @include media-query(lap-and-up){
     max-width: $site-container-width;
-    padding: 0 $inuit-base-spacing-unit;
+    padding: 0 $inuit-base-spacing-unit--small;
   }
- 
+
 }
