@@ -44,6 +44,9 @@
   </head>
 
   <body <?php body_class(); ?> <?php _s_body_data(); ?>>
+    <div style="display:none;">
+      <?php include_once("assets/images/defs.svg"); ?>
+    </div>
     <div id="page" class="hfeed site">
       <a class="skip-link screen-reader-text" href="#content"><?php _e('Skip to content', '_s'); ?></a>
 
@@ -51,13 +54,23 @@
         <div class="master-header">
           <div class="master-header__branding">
             <div class="branding">
-              <h1 class="branding__title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a></h1>
-              <h2 class="branding__description"><?php bloginfo('description'); ?></h2>
+              <h1 class="branding__title">
+                <a href="<?php echo esc_url(home_url('/')); ?>" rel="home">
+                  <svg role="img" aria-label="<?php echo esc_attr(get_bloginfo('name', 'display')); ?> <?php echo esc_attr(get_bloginfo('description', 'display')); ?>" preserveAspectRatio="none" class="icon branding__title__icon ">
+                  <title><?php echo esc_attr(get_bloginfo('name', 'display')); ?></title>
+                  <desc><?php echo esc_attr(get_bloginfo('description', 'display')); ?></desc>
+                  <use xlink:href="<?php //echo '/content/themes/ac-inuk/assets/images/defs.svg';                     ?>#icon-bumps-logo" />
+                  </svg>
+                </a>
+              </h1>
             </div><!-- .branding -->
           </div><!-- .master-header__branding -->
           <?php get_template_part('template_parts/sidebar--header'); ?>
         </div><!-- .master-header -->
       </header><!-- #masthead -->
+      <div class="site__slider">
+        <?php get_template_part('template_parts/slider--master'); ?>
+      </div><!-- .site--slider -->
       <nav id="main-navigation" class="site__navigation" role="navigation">
         <div class="navigation--main">
           <button class="navigation--main__toggle" aria-controls="navigation--main__menu" aria-expanded="false"><?php _e('Primary Menu', '_s'); ?></button>

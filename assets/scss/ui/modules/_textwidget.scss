@@ -1,0 +1,50 @@
+.textwidget{
+  display: block;
+}
+
+.textwidget--call-now{
+  text-align: right;
+}
+
+.textwidget--call-now__call{
+  @extend .beta;
+  color: $brand-col-2;
+
+}
+.textwidget--call-now__tel{
+  @extend .beta;
+  @extend %link-style-1;
+  font-weight: 700;
+  color: $brand-col-2;
+  text-shadow: 1px 1px 0 rgba(#000, 0.3);
+}
+
+.textwidget--logo{
+  @extend .desk-one-fifth;
+  .icon--logo{
+    fill: $yellow--pale;
+    width: 100px;
+    height: 100px;
+  }
+}
+
+.textwidget--address{
+  @extend .desk-one-quarter;
+}
+
+.textwidget--contact{
+  @extend .desk-one-quarter;
+  .contact{
+    padding-left: 0em;
+    list-style: none;
+    margin: 0;
+  }
+  .contact__label{
+    color: $yellow--pale;
+    font-weight: 700;
+    text-decoration: none;
+    text-shadow: 1px 1px 0 rgba(#fff, 0.2);
+    @include inuit-font-size(19px);
+  }
+}
+

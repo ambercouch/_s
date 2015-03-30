@@ -1,0 +1,29 @@
+/*
+
+*/
+/*
+    Created on : 27-Mar-2015, 14:45:33
+    Author     : Richard
+*/
+
+%link-style-1{
+
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  line-height: 1;
+  &:after{
+    transition: all 0.3s ease;
+    content: '';
+    width: 0%;
+    display: block;
+    border-bottom: solid 1px;
+    margin: 0 auto;
+  }
+  &:hover{
+    &:after{
+      width: 100%;
+    }
+  }
+}
+

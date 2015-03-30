@@ -17,15 +17,15 @@ module.exports = function (grunt) {
       }
     },
     sass: {
-        options: {
-            sourceMap: true,
-            outputStyle: 'compressed'
-        },
-        dist: {
-            files: {
-                'style.css': 'assets/scss/main.scss'
-            }
+      options: {
+        sourceMap: true,
+        outputStyle: 'compressed'
+      },
+      dist: {
+        files: {
+          'style.css': 'assets/scss/main.scss'
         }
+      }
     },
     cssmin: {
       build: {
@@ -47,19 +47,20 @@ module.exports = function (grunt) {
         separator: ''
       },
       dist: {
-        src: ['assets/css/style.css','style.css'],
+        src: ['assets/css/style.css', 'style.css'],
         dest: 'style.css'
       }
     },
     svgstore: {
       options: {
         svg: {
-          style: "display:none"
+          style: "display:none",
+          viewBox: '0 0 100 100'
         },
         prefix: 'icon-', // This will prefix each ID
-        svg: {// will be added as attributes to the resulting SVG
-          viewBox: '0 0 100 100'
-        }
+        cleanup: ['fill'],
+        cleanupdefs: true
+
       },
       default: {
         files: {

@@ -1,0 +1,30 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/*
+    Created on : 29-Mar-2015, 17:11:07
+    Author     : Richard
+*/
+
+.wpcf7{
+
+}
+.wpcf7-text,
+.wpcf7-textarea{
+  padding: 0.5em;
+  width:100%;
+  border: solid 1px $brand-col-4;
+  &:focus{
+    box-shadow: inset 0 2px 5px 1px rgba(#000, 0.15);
+  }
+}
+.wpcf7-submit{
+  @extend %btn-style-1;
+  width: 100%;
+}
+
+::placeholder {
+  color: #ccc
+}

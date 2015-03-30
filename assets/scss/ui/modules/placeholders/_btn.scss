@@ -1,0 +1,26 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/*
+    Created on : 29-Mar-2015, 17:33:45
+    Author     : Richard
+*/
+
+%btn-style-1{
+  transition: all 0.3s ease;
+  @include inuit-font-size(19px);
+  padding: 0.5em 1em;
+  background: $yellow--pale;
+  color: $brand-col-4;
+  font-weight: 900;
+  text-align: center;
+  text-shadow: 1px 1px 0 #fff;
+  border: solid 1px $brand-col-4;
+  box-shadow: 0 0 0 rgba(#000, 0);
+  &:hover{
+    background: $brand-col-2;
+    box-shadow: 0 0 10px rgba(#000, 0.35);
+  }
+}

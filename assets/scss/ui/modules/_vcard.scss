@@ -1,0 +1,26 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/*
+    Created on : 29-Mar-2015, 21:03:24
+    Author     : Richard
+*/
+
+.vcard{
+  .url{
+    display: block;
+    color: $yellow--pale;
+    font-weight: 700;
+    text-decoration: none;
+    text-shadow: 1px 1px 0 rgba(#fff, 0.2);
+    @include inuit-font-size(19px);
+  }
+  .street-address{
+    display: block;
+  }
+  .region{
+    display: block;
+  }
+}

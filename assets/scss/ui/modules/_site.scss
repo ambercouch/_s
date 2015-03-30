@@ -1,5 +1,10 @@
 .site__master-header{
-
+  position: absolute;
+  width: 100%;
+  z-index: 9999;
+}
+.site__slider{
+  padding-top: $inuit-base-spacing-unit--large * 2;
 }
 .site__navigation{
   background: $brand-col-4;
@@ -8,9 +13,12 @@
 
 }
 .site__subsidiary{
-
+  background: $brand-col-4;
+  padding: $inuit-base-spacing-unit 0;
+  border-top: solid 5px $brand-col-2;
 }
 .site__footer{
-
+  background: $brand-col-2;
+  padding: $inuit-base-spacing-unit--small 0;
 }
 

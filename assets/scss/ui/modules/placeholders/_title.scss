@@ -8,7 +8,8 @@ and open the template in the editor.
     Author     : Richard
 */
 
-%title-style-1 {
+%title-style-1,
+.blocky-title {
   display: inline-block;
   padding: 0.25em 0.5em;
   background: $brand-col-4;

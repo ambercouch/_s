@@ -4,22 +4,8 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 */
 /*
-    Created on : 16-Feb-2015, 11:06:33
+    Created on : 26-Feb-2015, 16:27:20
     Author     : Richard
 */
-html {
-  font-family: $default-font-family;
-  color: $brand-col-4;
-}
 
-p{
-  max-width: 40em;
-}
-
-ul{
-  margin-left: 0;
-}
-
-h2{
-  @extend %title-style-1;
-}
+$inuit-enable-layout--rev: true;

@@ -1,8 +1,6 @@
-//.content is a container (max-width) and layout
-.content{
+.master-header{
   @extend %container;
   @extend %layout;
-  @extend %layout--rev;
   @include x-rem(font-size, 0);
   > * {
     @include x-rem(font-size, 1);
@@ -11,14 +9,12 @@
 
   }
 }
-.content__main{
+.master-header__branding{
   @extend %layout__item;
-  @extend .lap-four-fifths;
-  @extend .desk-two-thirds;
+  @extend .lap-and-up-one-half;
+}
+.master-header__widget-area{
+  @extend %layout__item;
+  @extend .lap-and-up-one-half;
+}
 
-}
-.content__widget-area{
-  @extend %layout__item;
-  @extend .lap-one-fifth;
-  @extend .desk-one-third;
-}
