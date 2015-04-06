@@ -20,6 +20,8 @@ require get_template_directory() . '/lib/body-data.php';
 
 require get_template_directory() . '/lib/filter--menu_objects.php';
 
+require get_template_directory() . '/lib/shortcode.php';
+
 /**
  * Implement the Custom Header feature.
  */
