@@ -9,6 +9,9 @@
 .textwidget--call-now__call{
   @extend .beta;
   color: $brand-col-2;
+  .is-sticky &{
+    @extend .delta;
+  }
 
 }
 .textwidget--call-now__tel{
@@ -17,6 +20,9 @@
   font-weight: 700;
   color: $brand-col-2;
   text-shadow: 1px 1px 0 rgba(#000, 0.3);
+  .is-sticky &{
+    @extend .delta;
+  }
 }
 
 .textwidget--logo{

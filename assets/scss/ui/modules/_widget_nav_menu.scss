@@ -16,7 +16,10 @@ and open the template in the editor.
       @extend %link-style-1;
       text-transform: uppercase;
       padding-left: $inuit-base-spacing-unit--small;
-      color: $brand-col-1;
+      color: $brand-col-4;
+      .is-sticky &{
+        color: #fff;
+      }
     }
   }
 }

@@ -10,6 +10,9 @@ and open the template in the editor.
 
 .widget-area--sidebar--header{
   margin-top: $inuit-base-spacing-unit;
+  .is-sticky &{
+    margin-top: $inuit-base-spacing-unit--small;
+  }
 }
 
 .widget-area--sidebar{

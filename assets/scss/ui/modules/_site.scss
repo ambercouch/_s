@@ -2,12 +2,20 @@
   position: absolute;
   width: 100%;
   z-index: 9999;
+  padding-bottom: $inuit-base-spacing-unit--small;
+  .is-sticky &{
+    background: $brand-col-4;
+  }
 }
 .site__slider{
   padding-top: $inuit-base-spacing-unit--large * 2;
 }
 .site__navigation{
   background: $brand-col-4;
+  .is-sticky &{
+    width: 100%;
+    background: transparent;
+  }
 }
 .site__content{
 

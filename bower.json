@@ -26,6 +26,7 @@
     "inuit-buttons": "~0.4.1",
     "inuit-layout": "~0.3.2",
     "inuit-media": "~0.4.2",
-    "inuit-widths": "~0.3.2"
+    "inuit-widths": "~0.3.2",
+    "sticky": "~1.0.1"
   }
 }

@@ -1,0 +1,13 @@
+.sticky-wrapper{
+  transition-timing-function: cubic-bezier(0.1, 0.1, 0.5, 0.5);
+  transition-duration: 0.3s;
+  * {
+    transition-timing-function: cubic-bezier(0.1, 0.1, 0.5, 0.5);
+    transition-duration: 0.3s;
+  }
+ &[id^=masthead] {
+   position: absolute;
+   width: 100%;
+ }
+
+}

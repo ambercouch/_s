@@ -3,12 +3,43 @@
 */
 
 .branding{
+  transition-property: padding-top;
   padding-top: $inuit-base-spacing-unit;
+  .is-sticky &{
+    padding-top: $inuit-base-spacing-unit--small;
+  }
 }
 .branding__title{
   margin: 0;
+  a{
+    display: block;
+  }
 }
 .branding__title__icon{
+  animation-duration: 1s;
+  animation-name: spinin;
+  animation-timing-function: cubic-bezier(0.1, 0.1, 0.5, 0.5);
+  animation-fill-mode: forwards;
+
+  transition-property: width, height;
+
   width: 165px;
-  fill: $brand-col-4;;
+  height: 150px;
+  fill: $brand-col-4;
+  .is-sticky &{
+    height: 82px;
+    width: 90px;
+    fill: #fff;
+  }
+}
+@keyframes spinin {
+  0%{
+    transform: rotate(0) scale(0.4);
+    opacity: 0.1;
+  }
+
+  100%{
+    transform: rotate(-15deg) scale(1);
+    opacity: 1;
+  }
 }

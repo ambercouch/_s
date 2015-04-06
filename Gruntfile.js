@@ -14,7 +14,11 @@ module.exports = function (grunt) {
       svg: {
         files: 'assets/images/svg/*.svg',
         tasks: ['svgstore']
-      }
+      },
+        js: {
+            files: 'assets/js/*.js',
+            tasks: ['uglify']
+        }
     },
     sass: {
       options: {
@@ -69,7 +73,19 @@ module.exports = function (grunt) {
         //your_target: {
 
       }
-    }//svgstore
+    },//svgstore
+      uglify: {
+          my_target: {
+              files: {
+                  'assets/js/dist/main.js': [
+                      //'assets/vendor/remodal/dist/jquery.remodal.js',
+                     // 'assets/vendor/fitvids/jquery.fitvids.js',
+                      'assets/vendor/sticky/jquery.sticky.js',
+                      //'assets/js/plugins.js',
+                      'assets/js/bds.js']
+              }
+          }
+      }
   });
 
   // 3. Where we tell Grunt we plan to use this plug-in.

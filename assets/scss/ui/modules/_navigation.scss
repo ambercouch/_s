@@ -11,6 +11,16 @@ and open the template in the editor.
 .navigation--main{
   @extend %container;
   max-width: 860px;
+  position: relative;
+  z-index: 9999;
+  transition-timing-function: ease !important;
+  transition-duration: 0.6s !important;
+  .is-sticky &{
+    transform: scale(0.5);
+    transform-origin: 0 0;
+    margin-top: $inuit-base-spacing-unit--small;
+
+}
 }
 .navigation--main__toggle{
   @extend %responsive-toggle;
