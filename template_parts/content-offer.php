@@ -6,7 +6,7 @@
 
 <section id="post-<?php the_ID(); ?>" <?php post_class('offer-box__offer'); ?>>
   <header class="offer__header">
-    <?php the_title(sprintf('<h1 class="post__title"><a href="%s" rel="bookmark">', esc_url(get_permalink())), '</a></h1>'); ?>
+    <?php the_title(sprintf('<h1 class="offer__title">', esc_url(get_permalink())), '</h1>'); ?>
   </header><!-- .post__header -->
 
   <div class="offer__content">

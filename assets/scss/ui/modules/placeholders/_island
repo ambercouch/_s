@@ -1,0 +1,31 @@
+%island,
+%islet{
+  display:block;
+  @extend .cf;
+}
+%island{
+  padding:$inuit-base-spacing-unit;
+}
+%island > :last-child,
+%islet > :last-child{
+  margin-bottom:0;
+  :last-child{
+    margin-bottom:0;
+  }
+}
+%island > :first-child,
+%islet > :first-child{
+  margin-top:0;
+  :first-child{
+    margin-top:0;
+  }
+}
+
+
+/**
+ * Just like `.island`, only smaller.
+ */
+%islet{
+  padding:$inuit-base-spacing-unit--small;
+}
+//test

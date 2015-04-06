@@ -1,0 +1,11 @@
+
+.offer-box__offer{
+  @extend %islet;
+  //test
+   border: 2px $brand-col-2;
+  border-style: solid none;
+  background: $yellow--white;
+ }
+.offer__title{
+  @extend %title-style-1;
+}
