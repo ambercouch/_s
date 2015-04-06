@@ -15,4 +15,16 @@ and open the template in the editor.
   background: $brand-col-4;
   color: #fff;
   box-shadow: 10px 10px 0 $brand-col-2;
+  a{
+    color: #fff;
+    text-decoration: none;
+    padding: 0.25em 0.5em;
+    margin: -0.25em -0.5em ;
+    display: block;
+    background: $brand-col-4;
+    &:hover{
+      background: lighten($brand-col-4, 10%);
+    }
+
+  }
 }
