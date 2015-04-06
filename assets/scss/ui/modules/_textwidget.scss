@@ -7,19 +7,25 @@
 }
 
 .textwidget--call-now__call{
-  @extend .beta;
+  @extend .delta;
   color: $brand-col-2;
+  .home &{
+    @extend .beta;
+  }
   .is-sticky &{
     @extend .delta;
   }
 
 }
 .textwidget--call-now__tel{
-  @extend .beta;
+  @extend .delta;
   @extend %link-style-1;
   font-weight: 700;
   color: $brand-col-2;
   text-shadow: 1px 1px 0 rgba(#000, 0.3);
+  .home &{
+    @extend .beta;
+  }
   .is-sticky &{
     @extend .delta;
   }

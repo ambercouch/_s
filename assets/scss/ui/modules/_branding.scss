@@ -4,7 +4,10 @@
 
 .branding{
   transition-property: padding-top;
-  padding-top: $inuit-base-spacing-unit;
+  padding-top: $inuit-base-spacing-unit--small;
+  .home &{
+    padding-top: $inuit-base-spacing-unit;
+  }
   .is-sticky &{
     padding-top: $inuit-base-spacing-unit--small;
   }
@@ -16,16 +19,21 @@
   }
 }
 .branding__title__icon{
-  animation-duration: 1s;
-  animation-name: spinin;
-  animation-timing-function: cubic-bezier(0.1, 0.1, 0.5, 0.5);
-  animation-fill-mode: forwards;
 
+  height: 82px;
+  width: 90px;
   transition-property: width, height;
-
-  width: 165px;
-  height: 150px;
-  fill: $brand-col-4;
+  transform: rotate(-15deg);
+  fill: #fff;
+  .home &{
+    animation-duration: 1s;
+    animation-name: spinin;
+    animation-timing-function: cubic-bezier(0.1, 0.1, 0.5, 0.5);
+    animation-fill-mode: forwards;
+    width: 165px;
+    height: 150px;
+    fill: $brand-col-4;
+  }
   .is-sticky &{
     height: 82px;
     width: 90px;

@@ -3,17 +3,21 @@
 var BDS = {
     common: {
         init: function () {
-
-            console.log('common js ');
+            console.log('common ');
             $("#masthead").sticky({topSpacing:0});
             $('#main-navigation').sticky({topSpacing:0});
-
         }
+
     },
     page: {
         init: function () {
 
             console.log('page js')
+        },
+        home: function () {
+            console.log('page home js ');
+
+            $('#main-navigation').sticky({topSpacing:0});
         }
     },
     post: {

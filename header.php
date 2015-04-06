@@ -68,9 +68,11 @@
           <?php get_template_part('template_parts/sidebar--header'); ?>
         </div><!-- .master-header -->
       </header><!-- #masthead -->
+        <?php if(is_front_page()) : ?>
       <div class="site__slider">
         <?php get_template_part('template_parts/slider--master'); ?>
       </div><!-- .site--slider -->
+        <?php endif; ?>
       <nav id="main-navigation" class="site__navigation" role="navigation">
         <div class="navigation--main">
           <button class="navigation--main__toggle" aria-controls="navigation--main__menu" aria-expanded="false"><?php _e('Primary Menu', '_s'); ?></button>

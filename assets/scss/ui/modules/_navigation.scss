@@ -15,10 +15,20 @@ and open the template in the editor.
   z-index: 9999;
   transition-timing-function: ease !important;
   transition-duration: 0.6s !important;
+  transform: scale(0.5);
+  transform-origin: 0 0;
+  padding-top: $inuit-base-spacing-unit--small;
+  height: 120px;
+  .home &{
+    transform: none;
+    max-width: 860px;
+    padding-top: 0;
+    height: auto;
+  }
   .is-sticky &{
     transform: scale(0.5);
     transform-origin: 0 0;
-    margin-top: $inuit-base-spacing-unit--small;
+    padding-top: $inuit-base-spacing-unit--small;
 
 }
 }
