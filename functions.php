@@ -12,6 +12,8 @@ require get_template_directory() . '/lib/content-width.php';
 
 require get_template_directory() . '/lib/theme-setup.php';
 
+require get_template_directory() . '/lib/custom-functions.php';
+
 require get_template_directory() . '/lib/widget-areas.php';
 
 require get_template_directory() . '/lib/enqueue.php';
@@ -21,6 +23,8 @@ require get_template_directory() . '/lib/body-data.php';
 require get_template_directory() . '/lib/filter--menu_objects.php';
 
 require get_template_directory() . '/lib/shortcode.php';
+
+require get_template_directory() . '/lib/cpt.php';
 
 /**
  * Implement the Custom Header feature.
