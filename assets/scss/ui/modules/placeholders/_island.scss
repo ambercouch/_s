@@ -5,6 +5,15 @@
 }
 %island{
   padding:$inuit-base-spacing-unit;
+  %island__title{
+    margin: 0 - $inuit-base-spacing-unit 0 - $inuit-base-spacing-unit $inuit-base-spacing-unit 0 - $inuit-base-spacing-unit;
+    margin-top: 0 - $inuit-base-spacing-unit !important;
+
+    padding: $inuit-base-spacing-unit--small $inuit-base-spacing-unit;
+    > :last-child{
+      margin-bottom: 0;
+    }
+  }
 }
 %island > :last-child,
 %islet > :last-child{
