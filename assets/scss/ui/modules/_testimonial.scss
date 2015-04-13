@@ -1,0 +1,27 @@
+.testimonial{
+  @extend %layout__item;
+  @extend .desk-one-third;
+}
+.testimonial__wrapper{
+  @extend %box-shadow--style-1;
+  background: $brand-col-5;
+
+  border:solid 1px #fff;
+
+  max-width: 200px;
+  margin: 0 auto;
+  margin-bottom: $inuit-base-spacing-unit;
+}
+.testimonial__header{
+  text-align: center;
+  img{
+    display: block;
+    //padding: 3px;
+    //background: #fff;
+   // border: solid 1px rgba($brand-col-4,  0.1);
+  }
+}
+.testimonial__content{
+  @extend %islet;
+  @include inuit-font-size(14px, 1.4);
+}
