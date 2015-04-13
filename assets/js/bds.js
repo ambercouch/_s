@@ -25,6 +25,51 @@ var BDS = {
             console.log('all posts');
         }
     },
+    archive : {
+        testimonial: function () {
+            console.log('testimonial');
+            //var currentTallest = 0,
+            //    currentRowStart = 0,
+            //    rowDivs = [],
+            //    $el,
+            //    topPosition = 0,
+            //    count = $('.testimonial__wrapper').length;
+            //
+            //
+            //$('.testimonial__wrapper').each(function(index, el) {
+            //    //console.log(i);
+            //    //console.log(count);
+            //    $el = $(this);
+            //    if ($el.offset().top > topPosition || index == count - 1 ){
+            //        if(rowDivs.length > 0){
+            //
+            //            console.log(currentTallest);
+            //            for (var i = 0; i < rowDivs.length; ++i) {
+            //                console.log();
+            //            }
+            //            //$.each(rowDivs , function(i,el){
+            //            //    console.log('ech div');
+            //            //    console.log(i);
+            //            //    $(el).outerHeight(currentTallest);
+            //            //})
+            //        }
+            //        rowDivs = [];
+            //        console.log('reset');
+            //        console.log(rowDivs.length);
+            //        topPosition = $el.offset().top;
+            //        currentTallest = 0;
+            //    }
+            //    if( $el.outerHeight() > currentTallest){
+            //        currentTallest = $el.outerHeight();
+            //        rowDivs.push($el);
+            //    }
+            //        console.log(rowDivs.length);
+            //
+            //
+            //
+            //});​
+        }
+    },
     gaq :{
         video : function(){
 

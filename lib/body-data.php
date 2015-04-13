@@ -13,6 +13,10 @@ function _s_get_body_data() {
   if (is_home()) {
     $post_slug = 'blog';
   }
+    if (is_archive()) {
+        $post_slug = get_post_type(get_the_ID());
+        $body_data['post-type'] = 'archive';
+    }
   $body_data['post-slug'] = $post_slug;
 
   return $body_data;

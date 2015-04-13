@@ -9,7 +9,11 @@ and open the template in the editor.
 */
 
 .wpcf7{
-
+  .main &{
+    @extend %island;
+    background: $brand-col-5;
+    @extend %box-shadow--style-1;
+  }
 }
 .wpcf7-text,
 .wpcf7-textarea{
@@ -22,6 +26,7 @@ and open the template in the editor.
 }
 .wpcf7-submit{
   @extend %btn-style-1;
+  @extend %box-shadow--style-1;
   width: 100%;
 }
 

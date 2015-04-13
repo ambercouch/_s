@@ -2,7 +2,7 @@
 .content{
   @extend %container;
   @extend %layout;
-  @extend %layout--rev;
+  //@extend %layout--rev;
   @include x-rem(font-size, 0);
   > * {
     @include x-rem(font-size, 1);

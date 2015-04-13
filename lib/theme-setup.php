@@ -37,6 +37,8 @@ if (!function_exists('_s_setup')) :
      */
     add_theme_support('post-thumbnails');
 
+      set_post_thumbnail_size( 200, 300, array( 'center', 'center')  );
+
     // This theme uses wp_nav_menu() in one location.
     register_nav_menus(array(
         'primary' => __('Primary Menu', '_s'),

@@ -5,3 +5,8 @@ p{
 h2{
   @extend %title-style-1;
 }
+a:link,
+a:visited{
+  color: $blue;
+
+}

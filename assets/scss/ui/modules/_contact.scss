@@ -1,0 +1,15 @@
+.contact__content{
+  @extend %layout;
+  @include x-rem(font-size, 0);
+  > *{
+    @extend %layout__item;
+    @include x-rem(font-size, 1);
+
+  }
+}
+.contact__address{
+  @extend .desk-one-half
+}
+.contact__details{
+  @extend .desk-one-half
+}

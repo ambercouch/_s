@@ -32,7 +32,7 @@ and open the template in the editor.
 @import "var/settings.layout";
 @import "../vendor/inuit-layout/objects.layout";
 @import "../vendor/inuit-media/objects.media";
-
+//
 @import "mixins";
 @import "helpers";
 @import "var/settings.typography";
@@ -48,6 +48,7 @@ and open the template in the editor.
 @import "ui/modules/placeholders/link-style";
 @import "ui/modules/placeholders/btn";
 @import "ui/modules/placeholders/island";
+@import "ui/modules/placeholders/box-shadow";
 @import "ui/modules/site";
 @import "ui/modules/master-header";
 @import "ui/modules/branding";
@@ -66,8 +67,11 @@ and open the template in the editor.
 @import "ui/modules/vcard";
 @import "ui/modules/offer-box";
 @import "ui/modules/_sticky";
+@import "ui/modules/_archive";
+@import "ui/modules/_testimonial";
+@import "ui/modules/_contact";
 @import "ui/accessibility";
-
+//
 //@import "components.page-head";
 //@import "components.page-foot";
 //@import "components.site-nav";

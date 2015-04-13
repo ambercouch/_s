@@ -10,16 +10,15 @@ get_header();
 ?>
 <div class="content">
   <main id="primary" class="content__main" role="main">
-    <div class="main">
+    <div class="archive--testimonial">
       <?php if (have_posts()) : ?>
 
-        <header class="main__header--archive">
-          <?php
-          the_archive_title('<h1 class="main__header--archive__title">', '</h1>');
-          the_archive_description('<div class="main__header--archive__tax-description">', '</div>');
-          ?>
-        </header><!-- .page-header -->
+        <header class="archive--testimonial__header">
 
+          <h1 class="archive--testimonial__title"> <?php post_type_archive_title(); ?></h1>
+
+        </header><!-- .page-header -->
+        <div class="archive--testimonial__testimonials">
         <?php /* Start the Loop */ ?>
         <?php while (have_posts()) : the_post(); ?>
 
@@ -28,16 +27,15 @@ get_header();
            * If you want to override this in a child theme, then include a file
            * called content-___.php (where ___ is the Post Format name) and that will be used instead.
            */
-          get_template_part('template_parts/content', get_post_format());
+          get_template_part('template_parts/content-testimonial');
           ?>
 
         <?php endwhile; ?>
 
+        </div>
         <?php the_posts_navigation(); ?>
 
-      <?php else : ?>
 
-        <?php get_template_part('content', 'none'); ?>
 
       <?php endif; ?>
     </div><!-- .main -->
