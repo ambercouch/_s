@@ -1,7 +1,9 @@
 .product-group{
   @extend %island;
   border: solid 1px $brand-col-4;
+  margin-bottom: $inuit-base-spacing-unit;
 }
+
 .product-group__title{
   @extend %island__title;
   background: $brand-col-4;

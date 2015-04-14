@@ -28,6 +28,7 @@ and open the template in the editor.
 @import "base/html";
 //@import "base.quotes";
 
+@import "var/settings.buttons";
 @import "../vendor/inuit-buttons/objects.buttons";
 @import "var/settings.tables";
 @import "../vendor/inuit-tables/objects.tables";
@@ -74,6 +75,7 @@ and open the template in the editor.
 @import "ui/modules/_contact";
 @import "ui/modules/_product-group";
 @import "ui/modules/_table";
+@import "ui/modules/_links";
 @import "ui/accessibility";
 //
 //@import "components.page-head";

@@ -48,3 +48,8 @@ function ac_custom_loop($postType, $showPosts, $name = NULL, $order = 'menu_orde
     $wp_query = $temp_q;
     wp_reset_query();
 }
+
+function key_value_pair_exists(array $haystack, $key, $value) {
+  return array_key_exists($key, $haystack) &&
+  ($haystack[$key] == $value || str_replace(' ', '-', strtolower($haystack[$key])) == $value);
+}

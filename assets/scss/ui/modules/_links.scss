@@ -1,0 +1,28 @@
+.links__list {
+  padding: 0;
+}
+
+.links__item {
+  list-style: none;
+  margin-bottom: $inuit-base-spacing-unit--small;
+}
+
+.links__item__link {
+  @extend %island;
+  border-bottom: solid 1px $brand-col-4;
+}
+
+.links__item__link__head {
+  margin-bottom: $inuit-base-spacing-unit;
+}
+
+.links__item__link__title {
+  margin: 0;
+}
+
+.links__item__link__btn {
+  @extend %btn--small;
+  @extend %btn-style-2;
+  color: #fff !important;
+
+}

@@ -33,7 +33,14 @@ get_header();
         <?php endwhile; ?>
 
         </div>
-        <?php the_posts_navigation(); ?>
+        <?php
+        $args =  array(
+          'prev_text'          => 'Older Testimonials',
+          'next_text'          => __( 'Newer Testimonials' ),
+          'screen_reader_text' => __( 'Testimonials navigation' ),
+        );
+        ?>
+        <?php the_posts_navigation($args); ?>
 
 
 
