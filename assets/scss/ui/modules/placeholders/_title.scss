@@ -15,6 +15,9 @@ and open the template in the editor.
   background: $brand-col-4;
   color: #fff;
   box-shadow: 10px 10px 0 $brand-col-2;
+  @include media-query(portable){
+    box-shadow: 3px 3px 0 $brand-col-2;
+  }
   a{
     color: #fff;
     text-decoration: none;

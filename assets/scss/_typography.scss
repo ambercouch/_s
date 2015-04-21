@@ -8,6 +8,62 @@ and open the template in the editor.
     Author     : Richard
 */
 
+html {
+  @include media-query(lap){
+    @include inuit-font-size(14px, 1.5);
+  }
+  @include media-query(palm){
+    @include inuit-font-size(15px, 1.5);
+  }
+}
+
+h1,
+.#{$inuit-namespace}alpha,
+%#{$inuit-namespace}alpha {
+  @include inuit-font-size($inuit-heading-size-1);
+  @include media-query(lap){
+    @include inuit-font-size($inuit-heading-size-1 - 1);
+  }
+  @include media-query(palm){
+    @include inuit-font-size($inuit-heading-size-1 - 6);
+  }
+}
+
+h2,
+.#{$inuit-namespace}beta,
+%#{$inuit-namespace}beta {
+  @include inuit-font-size($inuit-heading-size-2);
+  @include media-query(lap){
+    @include inuit-font-size($inuit-heading-size-2 - 1);
+  }
+  @include media-query(palm){
+    @include inuit-font-size($inuit-heading-size-2 - 3);
+  }
+}
+
+h3,
+.#{$inuit-namespace}gamma,
+%#{$inuit-namespace}gamma {
+  @include inuit-font-size($inuit-heading-size-3);
+  @include media-query(lap){
+    @include inuit-font-size($inuit-heading-size-3 - 1);
+  }
+  @include media-query(palm){
+    @include inuit-font-size($inuit-heading-size-3 - 2);
+  }
+}
+
+h4,
+.#{$inuit-namespace}delta,
+%#{$inuit-namespace}delta {
+  @include inuit-font-size($inuit-heading-size-4);
+  @include media-query(lap){
+    @include inuit-font-size($inuit-heading-size-4 - 1);
+  }
+  @include media-query(palm){
+    @include inuit-font-size($inuit-heading-size-4 - 2);
+  }
+}
 
 .intro{
   font-size: 1.2em;

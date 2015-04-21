@@ -12,9 +12,21 @@ and open the template in the editor.
   margin-top: $inuit-base-spacing-unit--small;
   .home &{
     margin-top: $inuit-base-spacing-unit;
+    @include media-query(portable){
+
+      margin-top: 0;
+    }
   }
   .is-sticky &{
     margin-top: $inuit-base-spacing-unit--small;
+    @include media-query(portable){
+
+      margin-top: 0;
+    }
+  }
+  @include media-query(portable){
+
+    margin-top: 0;
   }
 }
 

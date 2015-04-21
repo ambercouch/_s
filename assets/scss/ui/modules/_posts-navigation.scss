@@ -1,0 +1,38 @@
+.posts-navigation{
+  @extend %container;
+
+  .nav-links {
+    @extend %layout;
+    //@extend %layout--rev;
+    @include x-rem(font-size, 0);
+
+    > * {
+      @include x-rem(font-size, 1);
+      @extend %layout__item;
+      @extend .one-half;
+    }
+  }
+}
+.nav-next{
+  text-align: right;
+  @include media-query(portable){
+    a {
+      font-size: 0;
+      &:after {
+        content: 'Newer';
+        @include x-rem(font-size, 1);
+      }
+    }
+  }
+}
+.nav-previous {
+  @include media-query(portable){
+    a {
+      font-size: 0;
+      &:after {
+        content: 'Older';
+        @include x-rem(font-size, 1);
+      }
+    }
+  }
+}

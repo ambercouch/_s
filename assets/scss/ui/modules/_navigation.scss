@@ -8,7 +8,7 @@ and open the template in the editor.
     Author     : Richard
 */
 
-.navigation--main{
+.navigation--main {
   @extend %container;
   max-width: 860px;
   position: relative;
@@ -19,32 +19,40 @@ and open the template in the editor.
   transform-origin: 0 0;
   padding-top: $inuit-base-spacing-unit--small;
   height: 120px;
-  .home &{
+  @include media-query(palm) {
+    max-width: 360px !important;
+    margin: 0 auto;
+  }
+
+  .home & {
     transform: none;
     max-width: 860px;
     padding-top: 0;
     height: auto;
+
   }
-  .is-sticky &{
+  .is-sticky & {
     transform: scale(0.5);
     transform-origin: 0 0;
     padding-top: $inuit-base-spacing-unit--small;
+    margin-left: 13%;
+    @include media-query(desk) {
+      margin-left: auto;
+    }
 
+  }
 }
-}
-.navigation--main__toggle{
-  @extend %responsive-toggle;
-}
-.navigation--main__menu{
-  @extend %responsive-menu__container;
+
+.navigation--main__menu {
+  //@extend %responsive-menu__container;
   @extend %nav;
   @extend %nav--banner;
   padding: 0;
-  font-size:0;
-  .menu-item{
+  font-size: 0;
+  .menu-item {
     @extend .desk-one-quarter;
     position: relative;
-    &:before{
+    &:before {
       content: '';
       position: absolute;
       left: 0;
@@ -53,22 +61,33 @@ and open the template in the editor.
       height: 70%;
       border-left: solid 2px $yellow--pale;
     }
-    &:last-of-type{
-      &:before{
+    &:last-of-type {
+      &:before {
         border-right: solid 2px $yellow--pale;
       }
     }
+    &:nth-of-type(2) {
+      @include media-query(palm) {
+        &:before {
+          border-right: solid 2px $yellow--pale;
+        }
+      }
+    }
 
-    a{
-      @include x-rem(font-size,1);
+    a {
+      @include x-rem(font-size, 1);
       transition: all 3.3s ease;
+      padding: $inuit-base-spacing-unit--small;
       position: relative;
       background: $brand-col-4;
       color: #fff;
       text-decoration: none;
-      display:block;
+      display: block;
       margin-left: 2px;
-      &:before{
+      @include media-query(tiny) {
+        padding-bottom: 0;
+      }
+      &:before {
         transition: all .6s ease;
         content: '';
         position: absolute;
@@ -78,38 +97,36 @@ and open the template in the editor.
         left: 0;
         opacity: 0;
         background: repeating-linear-gradient(
-          45deg,
-          transparent,
-          transparent 10px,
-          lighten($brand-col-4, 5%) 10px,
-          lighten($brand-col-4, 5%)  20px
-          );
+                        45deg,
+                        transparent,
+                        transparent 10px,
+                        lighten($brand-col-4, 5%) 10px,
+                        lighten($brand-col-4, 5%) 20px
+        );
       }
-      &:last-of-type{
+      &:last-of-type {
         margin-right: 2px;
       }
-      &:hover{
+      &:hover {
 
-
-        .menu__icon{
+        .menu__icon {
           transform: rotate(-10deg);
           background: $brand-col-2;
           box-shadow: 0.5px 0px 0 2px $yellow--pale, 0 1px 2px 4px rgba(#000, 0.5);
         }
-        .menu__title{
+        .menu__title {
           color: $brand-col-2;
           transform: scale(1.2);
           text-shadow: 0 2px 0 #000;
         }
-        &:before{
+        &:before {
           opacity: 1;
         }
       }
 
-
     }
   }
-  .menu__icon{
+  .menu__icon {
     position: relative;
     transition: all 0.3s ease;
     width: 140px;
@@ -117,31 +134,52 @@ and open the template in the editor.
     margin: 0 auto;
     background: $yellow--pale;
     border-radius: 50%;
-    border: solid 5px;;
+    border: solid 5px;
     box-shadow: 0.5px 0px 0 2px $yellow--pale, 0 0 0 rgba(#000, 0.1);
+    @include media-query(lap) {
+      width: 120px;
+      height: 120px;
+      .is-sticky &{
+        width: 110px;
+        height: 110px;
+      }
+    }
+    @include media-query(tiny) {
+      width: 110px;
+      height: 110px;
+    }
 
   }
-  .icon--svg{
+  .icon--svg {
     height: 100px;
     position: relative;
     width: 100px;
     fill: #fff;
-    &.icon-links{
-      top:15px;
+    @include media-query(lap) {
+      width: 70%;
+      height: 70%;
     }
-    &.icon-prices{
-      top:12px;
+    @include media-query(tiny) {
+      width: 70%;
+      height: 70%;
+    }
+    &.icon-links {
+      top: 15px;
+    }
+    &.icon-prices {
+      top: 12px;
       left: 2px;
     }
-    &.icon-about-you{
-      top:0;
+    &.icon-about-you {
+      top: 0;
     }
-    &.icon-testimonials{
-      top:19px;
-      left: 5px;
+    &.icon-testimonials {
+      top: 19px;
+      left: 3px;
+
     }
   }
-  .menu__title{
+  .menu__title {
     @extend .delta;
     position: relative;
     transition: all 0.3s ease;
@@ -151,5 +189,12 @@ and open the template in the editor.
     color: $yellow--pale;
     margin-top: $inuit-base-spacing-unit--small;
     text-shadow: 0 1px 0 rgba(#000, 0.5);
+    @include media-query(lap) {
+
+  }
+    @include media-query(tiny) {
+      @include inuit-font-size(12px);
+    }
+
   }
 }

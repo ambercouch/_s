@@ -8,5 +8,8 @@ and open the template in the editor.
     Author     : Richard
 */
 .slider--master{
-  height: 500px;
+  height: auto;
+  @include media-query(palm){
+    height: auto;
+  }
 }

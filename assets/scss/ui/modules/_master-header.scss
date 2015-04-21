@@ -16,5 +16,11 @@
 .master-header__widget-area{
   @extend %layout__item;
   @extend .lap-and-up-one-half;
+  @include media-query(palm){
+    width: 100%;
+    position: absolute;
+    top: 5px;
+    left: 0;
+  }
 }
 

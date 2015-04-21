@@ -4,6 +4,7 @@
 
 .textwidget--call-now{
   text-align: right;
+
 }
 
 .textwidget--call-now__call{
@@ -15,6 +16,11 @@
   .is-sticky &{
     @extend .delta;
   }
+  @include media-query(palm){
+    @include accessibility();
+    position: absolute;
+    top: 5px;
+  }
 
 }
 a.textwidget--call-now__tel{
@@ -25,10 +31,17 @@ a.textwidget--call-now__tel{
   text-shadow: 1px 1px 0 rgba(#000, 0.3);
   .home &{
     @extend .beta;
+    @include media-query(palm){
+      @include inuit-font-size($inuit-heading-size-3);
+      position: relative;
+      right: 10px;
+      top: 5px;
+    }
   }
   .is-sticky &{
     @extend .delta;
   }
+
 }
 
 .textwidget--logo{

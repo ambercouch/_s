@@ -11,8 +11,12 @@
     background: $brand-col-4;
   }
 }
+
 .site__slider{
   padding-top: $inuit-base-spacing-unit--large * 2;
+  @include media-query(palm){
+    padding-top: $inuit-base-spacing-unit--large * 2;
+  }
 }
 .site__navigation{
   background: transparent;
@@ -25,6 +29,7 @@
     background: transparent;
   }
 }
+
 .site__content{
 
 }

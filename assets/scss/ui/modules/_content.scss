@@ -13,12 +13,12 @@
 }
 .content__main{
   @extend %layout__item;
-  @extend .lap-four-fifths;
+  @extend .lap-two-thirds;
   @extend .desk-two-thirds;
 
 }
 .content__widget-area{
   @extend %layout__item;
-  @extend .lap-one-fifth;
+  @extend .lap-one-third;
   @extend .desk-one-third;
 }

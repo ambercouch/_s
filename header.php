@@ -75,7 +75,7 @@
         <?php endif; ?>
       <nav id="main-navigation" class="site__navigation" role="navigation">
         <div class="navigation--main">
-          <button class="navigation--main__toggle" aria-controls="navigation--main__menu" aria-expanded="false"><?php _e('Primary Menu', '_s'); ?></button>
+          <!-- <button class="navigation--main__toggle" aria-controls="navigation--main__menu" aria-expanded="false"><?php _e('Primary Menu', '_s'); ?></button> -->
           <?php get_template_part('template_parts/navigation--main'); ?>
         </div>
       </nav><!-- #site-navigation -->

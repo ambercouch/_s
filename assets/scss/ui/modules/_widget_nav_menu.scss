@@ -25,5 +25,8 @@ and open the template in the editor.
       }
     }
   }
+  @include media-query(palm){
+    display: none;
+  }
 }
 
