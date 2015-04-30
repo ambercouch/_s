@@ -78,7 +78,7 @@ module.exports = function (grunt) {
           my_target: {
               files: {
                   'assets/js/dist/main.js': [
-                      //'assets/vendor/remodal/dist/jquery.remodal.js',
+                      'assets/vendor/remodal/dist/jquery.remodal.js',
                      // 'assets/vendor/fitvids/jquery.fitvids.js',
                       'assets/vendor/sticky/jquery.sticky.js',
                       //'assets/js/plugins.js',

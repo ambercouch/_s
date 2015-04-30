@@ -13,3 +13,10 @@ and open the template in the editor.
     height: auto;
   }
 }
+
+.tp-caption h2{
+  @include media-query(palm){
+    font-size: 36px;
+    left: 500px;
+  }
+}

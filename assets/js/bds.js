@@ -35,6 +35,27 @@
             },
             home: function () {
                 console.log('page home js ');
+                console.log('tp caption test');
+
+                //// media query event handler
+                //if (matchMedia) {
+                //    var mq = window.matchMedia("(max-width: 694px)");
+                //    mq.addListener(WidthChange);
+                //    WidthChange(mq);
+                //}
+                //
+                //function WidthChange(mq) {
+                //
+                //    if (mq.matches) {
+                //        $(".tp-caption").css('left', '300px');
+                //
+                //        $('.tp-caption h2').css('font-size', '30px');
+                //        console.log('tp caption');
+                //    }
+                //    else {
+                //
+                //    }
+                //}
 
 
 
@@ -43,11 +64,19 @@
         post: {
             init: function () {
                 console.log('all posts');
+
             }
         },
         archive: {
             testimonial: function () {
                 console.log('testimonial');
+                console.log('rand');
+                console.log(Math.floor(Math.random() * ((-10-10)+1) + 10));
+                $(".testimonial__wrapper").each(function(i){
+                    var rand = Math.floor(Math.random() * ((-10-10)+1) + 10);
+                    $(this).addClass('tester');
+                    $(this).css('transform', 'rotateZ('+rand+'deg)');
+                });
                 //var currentTallest = 0,
                 //    currentRowStart = 0,
                 //    rowDivs = [],

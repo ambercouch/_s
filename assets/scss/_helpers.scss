@@ -17,3 +17,19 @@
   @include accessibility;
 }
 
+@include media-query(palm){
+  .accessibility--palm,
+  .visuallyhidden--palm{
+    @include accessibility;
+  }
+}
+
+@each $state in palm, lap, lap-and-up, portable, desk{
+  @include media-query(#{$state}){
+    .accessibility--#{$state},
+    .visuallyhidden--#{$state}{
+      @include accessibility;
+    }
+  }
+}
+

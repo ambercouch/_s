@@ -47,7 +47,7 @@
     <div style="display:none;">
       <?php include_once("assets/images/defs.svg"); ?>
     </div>
-    <div id="page" class="hfeed site">
+    <div id="page" class="hfeed site remodal-bg">
       <a class="skip-link screen-reader-text" href="#content"><?php _e('Skip to content', '_s'); ?></a>
 
       <header id="masthead" class="site__master-header" role="banner">
