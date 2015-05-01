@@ -1,7 +1,19 @@
 .table--products{
   @extend %table;
   @extend %table--cosy;
-  @extend %table--rows
+  @extend %table--rows;
+
+  td{
+    @include media-query(palm){
+      //padding: 0;
+    }
+  }
+
+}
+.table--product__title{
+  @include media-query(palm){
+    @include inuit-font-size(11px, 1.3);
+  }
 }
 .table--product__currency{
   text-align: right;
@@ -17,7 +29,14 @@
 }
 .table--product__pp{
   text-align: right;
+  vertical-align: top;
+  @include media-query(palm){
+    padding: 0 !important;
+  }
 }
 .table--product__buy{
   @extend %btn-style-2;
+  @include media-query(palm){
+    padding: 0;
+  }
 }

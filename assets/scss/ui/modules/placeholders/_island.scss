@@ -37,4 +37,16 @@
 %islet{
   padding:$inuit-base-spacing-unit--small;
 }
-//test
+
+%island--collapse{
+  @include media-query(palm){
+    padding: 0;
+    %island__title{
+      margin: 0!important;
+      padding: $inuit-base-spacing-unit--small;
+      > :last-child{
+        margin-bottom: 0;
+      }
+    }
+  }
+}
