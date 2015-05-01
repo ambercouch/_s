@@ -1,6 +1,8 @@
 .testimonial{
   @extend %layout__item;
   @extend .desk-one-sixth;
+  position: relative;
+  top: 12px;
 }
 .testimonial__wrapper{
   @extend %box-shadow--style-1;
@@ -43,4 +45,8 @@ padding: $inuit-base-spacing-unit * 1.5 ;
     width: 100%;
     height: auto;
   }
+}
+.testimonial__content--remodal{
+  padding: 0 $inuit-base-spacing-unit * 1.5 ;
+
 }

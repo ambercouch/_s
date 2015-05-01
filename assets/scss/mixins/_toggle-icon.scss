@@ -1,0 +1,74 @@
+/*
+ * menu toggle
+ */
+@mixin toggle-icon($pos : right, $border : true){
+  position:relative;
+  @if $border == true {
+    padding: 0.5em;
+  }
+
+  @if $pos == right {
+    padding-right: 2.75em;
+  }
+  @if $pos == left {
+    padding-left: 2.75em;
+  }
+  display: inline-block;
+  @if $border == true{
+    border: solid 1px ;
+  }
+  border-radius: 3px;
+  margin: 1em;
+  &:after{
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+    content: "";
+    width: 1.5em;
+    border-top: solid (.0625 * 3) *1em  ;
+    border-bottom: solid (.0625 * 3) *1em ;
+    position: absolute;
+    @if $pos == right {
+      right: 0.5em;
+    }
+    @if $pos == left{
+      left: 0.5em;
+    }
+    height: (.0625 * 15) *1em;
+  }
+  &:before{
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+    content: "";
+    width: 1.5em;
+    border-top: solid (.0625 * 3) *1em ;
+    border-bottom: solid (.0625 * 3) *1em ;
+    position: absolute;
+    height: (.0625 * 15) *1em;
+    margin-top: (.0625 * 6) *1em;
+    @if $pos == right {
+      right: 0.5em;
+    }
+    @if $pos == left{
+      left: 0.5em;
+    }
+  }
+  &.active{
+    &:before{
+      transform: rotateZ(45deg);
+      height:0;
+      border-top: solid (.0625 * 3) *1em ;
+      border-bottom: solid (.0625 * 3) *0em ;
+      margin-top: (.0625 * 6) *1.3em;
+
+    }
+    &:after{
+      transform: rotateZ(-45deg);
+      height:0;
+      border-top: solid (.0625 * 3) *1em ;
+      border-bottom: solid (.0625 * 3) *0em;
+      margin-top: (.0625 * 6) *1.3em;
+    }
+  }
+
+}
+

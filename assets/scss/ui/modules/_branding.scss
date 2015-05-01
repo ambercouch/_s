@@ -23,37 +23,40 @@
 }
 .branding__title{
   margin: 0;
+  display: inline-block;
   a{
     display: block;
   }
+
 }
 .branding__title__icon{
 
-  height: 82px;
-  width: 90px;
+  height: 100px;
+  width: 100px;
   transition-property: width, height;
   transform: rotate(-15deg);
-  fill: #fff;
+  color: #fff;
+  fill: $brand-col-4;
+
   .home &{
     animation-duration: 1s;
     animation-name: spinin;
     animation-timing-function: cubic-bezier(0.1, 0.1, 0.5, 0.5);
     animation-fill-mode: forwards;
     width: 165px;
-    height: 150px;
-    fill: $brand-col-4;
+    height: 165px;
+
     @include media-query(portable){
-      height: 62px;
-      width: 67px;
+      height: 100px;
+      width: 100px;
     }
   }
   .is-sticky &{
-    height: 82px;
-    width: 90px;
-    fill: #fff;
+    height: 110px;
+    width: 110px;
     @include media-query(portable){
-      height: 62px;
-      width: 67px;
+      height: 100px;
+      width: 100px;
     }
   }
 }

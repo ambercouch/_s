@@ -1,11 +1,10 @@
-"use strict";
+//"use strict";
+
 (function ($) {
     var BDS = {
         common: {
             init: function () {
                 console.log('common ');
-
-
                 // media query event handler
                 if (matchMedia) {
                     var mq = window.matchMedia("(min-width: 500px)");
@@ -34,8 +33,18 @@
                 console.log('page js')
             },
             home: function () {
+
                 console.log('page home js ');
                 console.log('tp caption test');
+
+                $('#masthead').on('sticky-start' , function(){
+
+                    $('.pushy__btn').addClass('stick');
+                });
+                $('#masthead').on('sticky-end' , function(){
+
+                    $('.pushy__btn').removeClass('stick');
+                });
 
                 //// media query event handler
                 //if (matchMedia) {
@@ -64,7 +73,6 @@
         post: {
             init: function () {
                 console.log('all posts');
-
             }
         },
         archive: {

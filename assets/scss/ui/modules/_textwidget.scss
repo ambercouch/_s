@@ -19,7 +19,7 @@
   @include media-query(palm){
     @include accessibility();
     position: absolute;
-    top: 5px;
+
   }
 
 }
@@ -29,17 +29,19 @@ a.textwidget--call-now__tel{
   font-weight: 700;
   color: $brand-col-2;
   text-shadow: 1px 1px 0 rgba(#000, 0.3);
+  padding-right: $inuit-base-spacing-unit--small;
   .home &{
     @extend .beta;
     @include media-query(palm){
       @include inuit-font-size($inuit-heading-size-3);
       position: relative;
       right: 10px;
-      top: 5px;
+      top: 60px;
     }
   }
   .is-sticky &{
     @extend .delta;
+
   }
 
 }

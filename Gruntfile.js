@@ -76,10 +76,14 @@ module.exports = function (grunt) {
     },//svgstore
       uglify: {
           my_target: {
+              options:{
+                  sourceMap: true
+              },
               files: {
                   'assets/js/dist/main.js': [
                       'assets/vendor/remodal/dist/jquery.remodal.js',
-                     // 'assets/vendor/fitvids/jquery.fitvids.js',
+                      'assets/js/pushy.js',
+                     //'assets/vendor/fitvids/jquery.fitvids.js',
                       'assets/vendor/sticky/jquery.sticky.js',
                       //'assets/js/plugins.js',
                       'assets/js/bds.js']

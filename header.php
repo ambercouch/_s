@@ -47,7 +47,13 @@
     <div style="display:none;">
       <?php include_once("assets/images/defs.svg"); ?>
     </div>
-    <div id="page" class="hfeed site remodal-bg">
+    <div class="menu-btn pushy__btn">Menu</div>
+    <div class="pushy pushy-right">
+      <?php get_template_part('template_parts/sidebar--pushy') ?>
+    </div>
+
+    <div class="site-overlay"></div>
+    <div id="container" class="hfeed site remodal-bg">
       <a class="skip-link screen-reader-text" href="#content"><?php _e('Skip to content', '_s'); ?></a>
 
       <header id="masthead" class="site__master-header" role="banner">
@@ -59,7 +65,7 @@
                   <svg role="img" aria-label="<?php echo esc_attr(get_bloginfo('name', 'display')); ?> <?php echo esc_attr(get_bloginfo('description', 'display')); ?>" preserveAspectRatio="none" class="icon branding__title__icon ">
                   <title><?php echo esc_attr(get_bloginfo('name', 'display')); ?></title>
                   <desc><?php echo esc_attr(get_bloginfo('description', 'display')); ?></desc>
-                  <use xlink:href="<?php //echo '/content/themes/ac-inuk/assets/images/defs.svg';                     ?>#icon-bumps-logo" />
+                  <use xlink:href="<?php //echo '/content/themes/ac-inuk/assets/images/defs.svg';                     ?>#icon-bumps-logo-inv" />
                   </svg>
                 </a>
               </h1>

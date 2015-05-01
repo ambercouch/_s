@@ -1,17 +1,5 @@
-@mixin size($width, $height: $width) {
-      width: $width;
-      height: $height;
-}
-
-// Add percentage of white to a color
-@function tint($color, $percent) {
-  @return mix(white, $color, $percent);
-}
-
-// Add percentage of black to a color
-@function shade($color, $percent) {
-  @return mix(black, $color, $percent);
-}
-
-@import "mixins/xrem"; 
+@import "mixins/xrem";
+@import "mixins/toggle-icon";
+@import "mixins/size";
+@import "mixins/functions.color";
 

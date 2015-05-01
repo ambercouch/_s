@@ -10,6 +10,7 @@ and open the template in the editor.
 
 .navigation--main {
   @extend %container;
+  display: none;
   max-width: 860px;
   position: relative;
   z-index: 9999;
@@ -19,10 +20,20 @@ and open the template in the editor.
   transform-origin: 0 0;
   padding-top: $inuit-base-spacing-unit--small;
   height: 120px;
+  @include media-query(lap-and-up) {
+    display: block;
+    left:100px;
+
+  }
   @include media-query(palm) {
     max-width: 360px !important;
     margin: 0 auto;
   }
+  @include media-query(desk) {
+    margin-left: auto;
+    left: 100px;
+  }
+
 
   .home & {
     transform: none;
@@ -36,8 +47,17 @@ and open the template in the editor.
     transform-origin: 0 0;
     padding-top: $inuit-base-spacing-unit--small;
     margin-left: 13%;
+    position: relative;
     @include media-query(desk) {
       margin-left: auto;
+      left: 100px;
+    }
+    @include media-query(lap) {
+      margin-left: auto;
+      //left: 40px;
+    }
+    @include media-query(palm) {
+      display:none;
     }
 
   }
@@ -196,5 +216,34 @@ and open the template in the editor.
       @include inuit-font-size(12px);
     }
 
+  }
+}
+.menu{
+  padding: 0;
+  .pushy &{
+    margin: $inuit-base-spacing-unit *3 0 $inuit-base-spacing-unit ;
+    @extend %nav;
+    @extend %nav--stacked;
+    .menu-item{
+
+    }
+    a{
+      transition: background 0.3s ease;
+      color: white;
+      padding: $inuit-base-spacing-unit--small /2 $inuit-base-spacing-unit--small /2 $inuit-base-spacing-unit--small /2 $inuit-base-spacing-unit--small * 2;
+      border: solid 1px $brand-col-4;
+      &:hover{
+      background: rgba(#fff, 0.1);
+        border-top-color: rgba(#fff, 0.05);
+        border-bottom-color: rgba(#fff, 0.05);
+        text-shadow: 1px 1px #000;
+    }
+    }
+  }
+}
+.menu-item{
+  list-style: none;
+  a{
+    text-decoration: none;
   }
 }
