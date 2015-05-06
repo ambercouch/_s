@@ -16,7 +16,7 @@
   .is-sticky &{
     @extend .delta;
   }
-  @include media-query(palm){
+  @include media-query(palm-or-less){
     @include accessibility();
     position: absolute;
 
@@ -29,14 +29,14 @@ a.textwidget--call-now__tel{
   font-weight: 700;
   color: $brand-col-2;
   text-shadow: 1px 1px 0 rgba(#000, 0.3);
-  padding-right: $inuit-base-spacing-unit--small;
+ //padding-right: $inuit-base-spacing-unit--small;
   .home &{
     @extend .beta;
-    @include media-query(palm){
-      @include inuit-font-size($inuit-heading-size-3);
+    @include media-query(palm-or-less){
+      @include inuit-font-size($inuit-heading-size-4);
       position: relative;
-      right: 10px;
-      top: 60px;
+      //right: 10px;
+      //top: 60px;
     }
   }
   .is-sticky &{
@@ -47,7 +47,7 @@ a.textwidget--call-now__tel{
 }
 
 .textwidget--logo{
-  @extend .desk-one-fifth;
+  @extend .lap-and-up-one-fifth;
   .icon--logo{
     fill: $yellow--pale;
     width: 100px;
@@ -56,11 +56,25 @@ a.textwidget--call-now__tel{
 }
 
 .textwidget--address{
-  @extend .desk-one-quarter;
+  @extend .lap-and-up-one-quarter;
+
+  @extend .tiny-one-whole;
+  @include media-query(tiny){
+    width: 100% !important;
+  }
+  @extend .palm-one-half;
+
+
 }
 
 .textwidget--contact{
-  @extend .desk-one-quarter;
+  @extend .lap-and-up-one-quarter;
+
+  @extend .tiny-one-whole;
+  @include media-query(tiny){
+    width: 100% !important;
+  }
+  @extend .palm-one-half;
   .contact{
     padding-left: 0em;
     list-style: none;

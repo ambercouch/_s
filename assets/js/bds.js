@@ -7,7 +7,7 @@
                 console.log('common ');
                 // media query event handler
                 if (matchMedia) {
-                    var mq = window.matchMedia("(min-width: 500px)");
+                    var mq = window.matchMedia("(min-width: 700px)");
                     mq.addListener(WidthChange);
                     WidthChange(mq);
                 }
@@ -31,13 +31,9 @@
             init: function () {
 
                 console.log('page js')
-            },
-            home: function () {
-
-                console.log('page home js ');
-                console.log('tp caption test');
 
                 $('#masthead').on('sticky-start' , function(){
+                    console.log('stick-start');
 
                     $('.pushy__btn').addClass('stick');
                 });
@@ -45,6 +41,13 @@
 
                     $('.pushy__btn').removeClass('stick');
                 });
+            },
+            home: function () {
+
+                console.log('page home js ');
+                console.log('tp caption test');
+
+
 
                 //// media query event handler
                 //if (matchMedia) {

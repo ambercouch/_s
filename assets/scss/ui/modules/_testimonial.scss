@@ -1,6 +1,10 @@
 .testimonial{
   @extend %layout__item;
   @extend .desk-one-sixth;
+  @extend .lap-one-quarter;
+  @extend .palm-one-third;
+  @extend .tiny-one-half;
+
   position: relative;
   top: 12px;
 }
@@ -9,6 +13,7 @@
   background: white;
   display: block;
   border:solid 1px #fafafa;
+  max-width: 106px;
 
 
   margin: 0 auto;

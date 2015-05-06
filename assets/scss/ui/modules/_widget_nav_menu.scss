@@ -12,6 +12,10 @@ and open the template in the editor.
   .menu{
     @extend %nav;
     margin: $inuit-base-spacing-unit--small 0 0 0;
+    .home &{
+      margin: 0 0 0 0;
+    }
+
     a{
       @extend %link-style-1;
       text-transform: uppercase;
@@ -25,7 +29,7 @@ and open the template in the editor.
       }
     }
   }
-  @include media-query(palm){
+  @include media-query(palm-or-less){
     display: none;
   }
 }

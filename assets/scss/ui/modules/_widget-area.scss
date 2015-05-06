@@ -14,13 +14,16 @@ and open the template in the editor.
     margin-top: $inuit-base-spacing-unit--small / 2;
   }
   .home &{
-    margin-top: $inuit-base-spacing-unit;
+
+    @include media-query(lap-and-up){
+      margin-top: $inuit-base-spacing-unit--small;
+    }
 
   }
   .is-sticky &{
     margin-top: $inuit-base-spacing-unit--small * 5;
-    @include media-query(desk){
-      //margin-top: $inuit-base-spacing-unit--small / 2;
+    @include media-query(lap-and-up){
+      margin-top: $inuit-base-spacing-unit--small / 2;
     }
   }
 

@@ -39,7 +39,7 @@
 }
 
 %island--collapse{
-  @include media-query(palm){
+  @include media-query(tiny){
     padding: 0;
     %island__title{
       margin: 0!important;
@@ -47,6 +47,9 @@
       > :last-child{
         margin-bottom: 0;
       }
+    }
+    td{
+      padding: $inuit-base-spacing-unit--small / 2;
     }
   }
 }

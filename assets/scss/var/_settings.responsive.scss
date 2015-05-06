@@ -8,13 +8,14 @@
 // `_tools.responsive`.
 
 $breakpoints: (
-    "tiny"          "(max-width: 355px)",
-    "palm"          "screen and (max-width: 694px)",
-    "lap"           "screen and (min-width: 695px) and (max-width: 1023px)",
-    "lap-and-up"    "screen and (min-width: 695px)",
-    "portable"      "screen and (max-width: 1023px)",
-    "desk"          "screen and (min-width: 1024px)",
-    "retina"        "(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)"
+    "tiny"             "screen and (max-width: 355px)",
+    "palm-or-less"     "screen and (max-width: 694px)",
+    "palm"             "screen and (min-width: 356px) and (max-width: 694px)",
+    "lap"              "screen and (min-width: 695px) and (max-width: 1023px)",
+    "lap-and-up"       "screen and (min-width: 695px)",
+    "portable"         "screen and (max-width: 1023px)",
+    "desk"             "screen and (min-width: 1024px)",
+    "retina"          "(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)"
 );
 
 

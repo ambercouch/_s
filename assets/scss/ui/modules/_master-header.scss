@@ -11,16 +11,22 @@
 }
 .master-header__branding{
   @extend %layout__item;
+  @extend .one-third;
   @extend .lap-and-up-one-half;
 }
 .master-header__widget-area{
   @extend %layout__item;
+  @extend .two-thirds;
   @extend .lap-and-up-one-half;
   @include media-query(palm){
-    width: 100%;
-    position: absolute;
-    top: 5px;
-    left: 0;
+    //width: 100%;
+   // position: absolute;
+   // top: 5px;
+    //left: 0;
+  }
+  @include media-query(desk){
+   // position: relative;
+   // z-index: 300;
   }
 }
 
