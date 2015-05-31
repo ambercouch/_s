@@ -22,6 +22,8 @@ require get_template_directory() . '/lib/body-data.php';
 
 require get_template_directory() . '/lib/wp_foot.php';
 
+require get_template_directory() . '/lib/admin.php';
+
 
 
 /**
