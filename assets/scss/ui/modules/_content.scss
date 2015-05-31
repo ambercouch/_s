@@ -8,6 +8,12 @@
   @extend .lap-and-up-four-fifths;
   @include x-rem(font-size, 1);
 }
+.content__main--full-width{
+  @extend %layout__item;
+  @extend .one-whole;
+  @include x-rem(font-size, 1);
+}
+
 .content__widget-area{
   @extend %layout__item;
   @extend .lap-and-up-one-fifth;
