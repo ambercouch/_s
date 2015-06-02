@@ -70,7 +70,7 @@ function bd_shortcode_product_group($atts) {
     $output .= '</td>';
     $output .= '<td class="table--product__pp">';
     $output .= '<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">';
-    $output .= '<input type="hidden" value="paypal@ambercouch.co.uk" name="business">';
+    $output .= '<input type="hidden" value="kwillicomb@aol.com" name="business">';
     $output .= '<input type="hidden" value="_xclick" name="cmd">';
 
     $output .= '<input type="hidden" value="1" name="upload">';
