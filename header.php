@@ -29,13 +29,9 @@
               <h2 class="branding__description"><?php bloginfo('description'); ?></h2>
             </div><!-- .branding -->
           </div><!-- .master-header__branding -->
+            <?php get_template_part('template_parts/navigation--head'); ?>
         </div><!-- .master-header -->
       </header><!-- .site__master-header -->
-      <nav id="main-navigation" class="site__navigation" role="navigation">
-        <div class="navigation--main">
-          <button class="navigation--main__toggle" aria-controls="navigation--main__menu" aria-expanded="false"><?php _e('Primary Menu', '_s'); ?></button>
-          <?php get_template_part('template_parts/navigation--main'); ?>
-        </div>
-      </nav><!-- #site-navigation -->
+        <?php get_template_part('template_parts/navigation--main'); ?>
 
       <div id="content" class="site__content">

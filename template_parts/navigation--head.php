@@ -1,13 +1,13 @@
 <?php
 
 $args = array(
-    'theme_location' => 'primary',
+    'theme_location' => 'head',
     'menu' => '',
     'container' => 'div',
     'container_class' => '',
     'container_id' => '',
-    'menu_class' => 'menu--main',
-    'menu_id' => 'main-menu',
+    'menu_class' => 'menu--head',
+    'menu_id' => 'head-menu',
     'echo' => true,
     'fallback_cb' => 'wp_page_menu',
     'before' => '',
@@ -20,11 +20,11 @@ $args = array(
 );
 ?>
 
-<?php  if(!has_nav_menu('primary')) {return;} ?>
+<?php  if(!has_nav_menu('head')) {return;} ?>
 
-<nav id="main-navigation" class="site__navigation" role="navigation">
-    <div class="navigation--main">
-        <button class="navigation--main__toggle" aria-controls="navigation--main__menu" aria-expanded="false"><?php _e('Primary Menu', '_s'); ?></button>
+<nav id="head-navigation" class="master-header__navigation" role="navigation">
+    <div class="navigation--head">
+        <button class="navigation--head__toggle" aria-controls="navigation--head__menu" aria-expanded="false"><?php _e('Head Menu', '_s'); ?></button>
         <?php wp_nav_menu($args); ?>
     </div>
 </nav><!-- #site-navigation -->

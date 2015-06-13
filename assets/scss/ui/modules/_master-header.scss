@@ -11,6 +11,7 @@ and open the template in the editor.
   @extend %container;
   @extend %layout;
   @include x-rem(font-size, 0);
+
   > * {
     @include x-rem(font-size, 1);
     //When %layout and %container are the same element
@@ -19,5 +20,11 @@ and open the template in the editor.
   }
 }
 .master-header__branding{
-  @extend %layout__item
+  @extend %layout__item;
+  @extend .lap-and-up-one-third;
+}
+
+.master-header__navigation{
+  @extend %layout__item;
+  @extend .lap-and-up-two-thirds;
 }
