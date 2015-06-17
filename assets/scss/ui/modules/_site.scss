@@ -1,13 +1,9 @@
-.site__header{
+
+.site__master-header{
 
 }
 .site__navigation{
 
-}
-.site__branding{
-  @extend %container;
-  @extend %layout--rev;
-  @include x-rem(font-size, 0);
 }
 .site__content{
 
@@ -16,6 +12,6 @@
 
 }
 .site__footer{
-
+  
 }
 

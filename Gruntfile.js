@@ -6,7 +6,7 @@ module.exports = function (grunt) {
     watch: {
       css: {
         files: 'assets/scss/**/*.scss',
-        tasks: ['sass', 'autoprefixer', 'concat'],
+        tasks: ['sass', 'autoprefixer'],
         options: {
           livereload: true
         }
@@ -35,12 +35,11 @@ module.exports = function (grunt) {
       }
     },
     autoprefixer: {
-      build: {
-        expand: true,
-        cwd: 'assets/css',
-        src: ['**/*.css'],
-        dest: 'assets/css'
-      }
+      options: {
+        map: true
+      },
+      src: 'style.css',
+     dest: 'style.css'
     },
     concat: {
       options: {
@@ -54,13 +53,10 @@ module.exports = function (grunt) {
     uglify: {
       my_target: {
         files: {
-          'assets/js/main.js': [
+          'assets/dist/js/main.js': [
             'assets/vendor/jquery/dist/jquery.min.js',
             'assets/vendor/jquery-form/jquery.form.js',
-            //'assets/js/wp-plugins/contact-form-7/scripts-cf7.js',
-            'assets/vendor/vegas/dist/jquery.vegas.js',
-            //'assets/vendor/jquery-smooth-scroll/jquery.smooth-scroll.min.js',
-            //'assets/vendor/jquery-sticky/jquery.sticky.js',
+            'assets/js/wp-plugins/contact-form-7/scripts-cf7.js',
             'assets/js/navigation.js',
             'assets/js/ac-inuk.js'
           ]
@@ -98,6 +94,6 @@ module.exports = function (grunt) {
 
 
   // 4. Where we tell Grunt what to do when we type "grunt" into the terminal.
-  grunt.registerTask('default', ['sass', 'autoprefixer', 'concat']);
+  grunt.registerTask('default', ['sass', 'autoprefixer']);
 
 };

@@ -22,6 +22,10 @@ require get_template_directory() . '/lib/body-data.php';
 
 require get_template_directory() . '/lib/wp_foot.php';
 
+require get_template_directory() . '/lib/admin.php';
+
+require get_template_directory() . '/lib/bem-classes.php';
+
 
 
 /**
@@ -48,3 +52,4 @@ require get_template_directory() . '/lib/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/lib/inc/jetpack.php';
+
