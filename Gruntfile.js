@@ -50,6 +50,19 @@ module.exports = function (grunt) {
         dest: 'style.css'
       }
     },
+    uglify: {
+      my_target: {
+        files: {
+          'assets/dist/js/main.js': [
+            'assets/vendor/jquery/dist/jquery.min.js',
+            'assets/vendor/jquery-form/jquery.form.js',
+            'assets/js/wp-plugins/contact-form-7/scripts-cf7.js',
+            'assets/js/navigation.js',
+            'assets/js/ac-inuk.js'
+          ]
+        }
+      }
+    },
     svgstore: {
       options: {
         svg: {

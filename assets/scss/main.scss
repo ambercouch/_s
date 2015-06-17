@@ -28,6 +28,8 @@ and open the template in the editor.
     Author     : Richard
 */
 @import "../vendor/inuit-defaults/settings.defaults";
+@import "var/settings.defaults";
+
 @import "var/settings.colours";
 @import "../vendor/inuit-responsive-settings/settings.responsive";
 @import "var/settings.responsive";
@@ -53,6 +55,11 @@ and open the template in the editor.
 @import "mixins";
 @import "helpers";
 @import "var/settings.container";
+@import "var/settings.fonts";
+@import "typography";
+@import "base/lists";
+@import "var/settings.container";
+@import "ui/modules/placeholders/typography";
 @import "ui/modules/placeholders/container";
 @import "ui/modules/placeholders/_layout";
 @import "ui/modules/placeholders/responsive-toggle";
@@ -66,7 +73,11 @@ and open the template in the editor.
 @import "ui/modules/menu";
 @import "ui/modules/branding";
 @import "ui/accessibility";
-
+@import "ui/modules/post";
+@import "ui/modules/widget";
+@import "ui/modules/sidebar";
+@import "ui/modules/branding";
+@import "ui/accessibility";
 
 
 

@@ -6,6 +6,7 @@
 
 .menu--main{
   @extend %nav;
+  @extend %nav--block;
   padding: 0;
 }
 

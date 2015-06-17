@@ -18,7 +18,7 @@
 
 <footer id="colophon" class="site__footer" role="contentinfo">
   <div class="footer">
-        <?php get_template_part('templates/snippets/footer__widget-area'); ?>
+        <?php get_template_part('template_parts/footer__widget-area'); ?>
   </div>
 </footer><!-- #colophon -->
 </div><!-- #page -->

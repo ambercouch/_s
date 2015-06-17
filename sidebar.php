@@ -4,13 +4,13 @@
  *
  * @package _s
  */
-if (!is_active_sidebar('aside-primary')) {
+if (!is_active_sidebar('aside-sidebar')) {
   return;
 }
 ?>
 
 <div id="secondary" class="content__widget-area" role="complementary">
   <div class="widget-area--sidebar">
-    <?php dynamic_sidebar('aside-primary'); ?>
+    <?php dynamic_sidebar('aside-sidebar'); ?>
   </div>
 </div><!-- #secondary -->
