@@ -23,6 +23,7 @@
 .site__navigation{
   background: transparent;
 
+  z-index: 9999;
   .home &{
     background: $brand-col-4;
   }
