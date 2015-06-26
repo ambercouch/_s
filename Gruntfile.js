@@ -46,6 +46,22 @@ module.exports = function (grunt) {
         dest: 'assets/css'
       }
     },
+      postcss: {
+          options: {
+              map: false, // inline sourcemaps
+
+
+
+              processors: [
+                 // require('pixrem')(), // add fallbacks for rem units
+                  require('autoprefixer-core')({browsers: 'ios'}) // add vendor prefixes
+                  //require('cssnano')() // minify the result
+              ]
+          },
+          dist: {
+              src: 'assets/css/*.css'
+          }
+      },
     concat: {
       options: {
         separator: ''
@@ -100,9 +116,10 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-sass');
   grunt.loadNpmTasks('grunt-autoprefixer');
   grunt.loadNpmTasks('grunt-svgstore');
+    grunt.loadNpmTasks('grunt-postcss');
 
 
   // 4. Where we tell Grunt what to do when we type "grunt" into the terminal.
-  grunt.registerTask('default', ['sass', 'autoprefixer', 'concat']);
+  grunt.registerTask('default', ['sass', 'postcss', 'concat']);
 
 };
