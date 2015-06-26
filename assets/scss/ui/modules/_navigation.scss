@@ -17,6 +17,8 @@ and open the template in the editor.
   transition-timing-function: ease !important;
   transition-duration: 0.6s !important;
   transform: scale(0.5);
+  -webkit-transform: scale(0.5);
+  -webkit-transform-origin: 0 0;
   transform-origin: 0 0;
   padding-top: $inuit-base-spacing-unit--small;
   height: 120px;
@@ -37,6 +39,7 @@ and open the template in the editor.
   .home & {
     display: block;
     transform: scale(1);
+    -webkit-transform: scale(1);
     max-width: 860px;
     padding-top: 0;
     height: auto;
@@ -45,7 +48,9 @@ and open the template in the editor.
   }
   .is-sticky & {
     transform: scale(0.5);
+    -webkit-transform: scale(0.5);
     transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;
     padding-top: $inuit-base-spacing-unit--small;
     margin-left: 13%;
     position: relative;
