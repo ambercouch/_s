@@ -26,6 +26,8 @@ require get_template_directory() . '/lib/admin.php';
 
 require get_template_directory() . '/lib/bem-classes.php';
 
+require get_template_directory() . '/lib/options.php';
+
 
 
 /**
