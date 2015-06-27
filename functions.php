@@ -29,6 +29,13 @@ require get_template_directory() . '/lib/bem-classes.php';
 require get_template_directory() . '/lib/options.php';
 
 
+// TODO put this somewhere nice - extras.php
+// Add SVG
+function cc_mime_types($mimes) {
+    $mimes['svg'] = 'image/svg+xml';
+    return $mimes;
+}
+add_filter('upload_mimes', 'cc_mime_types');
 
 /**
  * Implement the Custom Header feature.
