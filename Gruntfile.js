@@ -84,8 +84,8 @@ module.exports = function (grunt) {
                     ]
                 },
                 options: {
-                    watchTask: true,
-                    proxy: 'cardifmusic.local'
+                    proxy: 'cardiffmusic.local',
+                    watchTask: true
                 }
             }
         }
@@ -101,6 +101,6 @@ module.exports = function (grunt) {
 
 
     // 4. Where we tell Grunt what to do when we type "grunt" into the terminal.
-    grunt.registerTask('default', ['sass', 'postcss']);
+    grunt.registerTask('default', ['browserSync', 'watch']);
 
 };
