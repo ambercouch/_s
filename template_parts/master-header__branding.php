@@ -1,6 +1,5 @@
 <div class="master-header__branding">
     <div class="branding">
-        <?php //var_dump(get_field('global_hide_blog_title', 'options')); ?>
         <?php if (!get_field('global_company_logo', 'options')) : //no logo ?>
             <h1 class="branding__title">
                 <a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a>

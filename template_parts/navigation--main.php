@@ -24,7 +24,7 @@ $args = array(
 
 <nav id="main-navigation" class="site__navigation" role="navigation">
     <div class="navigation--main">
-        <button class="navigation--main__toggle" aria-controls="navigation--main__menu" aria-expanded="false"><?php _e('Primary Menu', '_s'); ?></button>
+        <button class="navigation--main__toggle" aria-controls="navigation--main__menu" aria-expanded="false"></button>
         <?php wp_nav_menu($args); ?>
     </div>
 </nav><!-- #site-navigation -->

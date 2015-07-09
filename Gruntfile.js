@@ -6,14 +6,15 @@ module.exports = function (grunt) {
         watch: {
             css: {
                 files: 'assets/scss/**/*.scss',
-                tasks: ['sass', 'postcss'],
-                options: {
-                    livereload: true
-                }
+                tasks: ['sass', 'postcss']
             },
             svg: {
                 files: 'assets/images/svg/*.svg',
                 tasks: ['svgstore']
+            },
+            js: {
+                files: 'assets/js/*.js',
+                tasks: ['uglify']
             }
         },
         sass: {

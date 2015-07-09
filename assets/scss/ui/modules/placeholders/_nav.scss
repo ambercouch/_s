@@ -89,9 +89,10 @@
     line-height:1;
     /**
      * Remove whitespace caused by `inline-block`.
+     * -- I prefer font-size:0 on the container
      */
-    letter-spacing:-0.31em;
-    word-spacing:-0.43em;
+    //letter-spacing:-0.31em;
+    //word-spacing:-0.43em;
     white-space:nowrap;
 
     > li{

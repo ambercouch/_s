@@ -11,6 +11,7 @@ get_header();
 <div class="content">
   <main id="primary" class="content__main" role="main">
     <div class="main">
+
       <?php if (have_posts()) : ?>
 
         <header class="main__header--archive">
@@ -40,8 +41,10 @@ get_header();
         <?php get_template_part('content', 'none'); ?>
 
       <?php endif; ?>
-    </div><!-- .main -->
-  </main><!-- .primary -->
+    </div>
+    <!-- .main -->
+  </main>
+  <!-- .primary -->
 
   <?php get_sidebar(); ?>
 </div><!-- .content -->

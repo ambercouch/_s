@@ -1,8 +1,4 @@
-@mixin size($width, $height: $width) {
-      width: $width;
-      height: $height;
-}
-
-@import "mixins/xrem"; 
-@import "mixins/headings"; 
+@import "mixins/xrem";
+@import "mixins/headings";
+@import "mixins/size";
 
