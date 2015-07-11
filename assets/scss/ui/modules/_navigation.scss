@@ -9,18 +9,10 @@ and open the template in the editor.
 */
 .navigation--main{
   @extend %container;
-  @extend %layout;
-  @include x-rem(font-size, 0);
-  > * {
-    @include x-rem(font-size, 1);
-    //When %layout and %container are the same element
-    @extend %layout--container;
-    @extend %layout__item;
-    @extend .one-whole;
-  }
 }
 .navigation--main__toggle{
-  @extend %responsive-toggle;
+  @include menu--icon(false, false);
+  float: right;
 }
 .navigation__container--head{
   @extend %layout__item;

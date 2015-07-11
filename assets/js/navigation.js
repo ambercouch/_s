@@ -6,15 +6,24 @@
 ( function() {
 	var container, button, menu;
 
+  console.log('navigation');
+
 	container = document.getElementById( 'main-navigation' );
 	if ( ! container ) {
 		return;
 	}
 
-	button = container.getElementsByTagName( 'button' )[0];
+  console.log(container);
+	button = container.getElementsByClassName( 'navigation--main__toggle' )[0];
+
+  console.log(button);
+
 	if ( 'undefined' === typeof button ) {
-		return;
+		button = container.querySelectorAll('.navigation--main__toggle')[0]
 	}
+  if ( 'undefined' === typeof button ) {
+    return;
+  }
 
 	menu = container.getElementsByTagName( 'ul' )[0];
 
@@ -30,13 +39,14 @@
 		menu.className += ' nav-menu';
 	}
 
+
 	button.onclick = function() {
-		if ( -1 !== container.className.indexOf( 'toggled' ) ) {
-			container.className = container.className.replace( ' toggled', '' );
+		if ( -1 !== container.className.indexOf( 'is-toggled' ) ) {
+			container.className = container.className.replace( ' is-toggled', '' );
 			button.setAttribute( 'aria-expanded', 'false' );
 			menu.setAttribute( 'aria-expanded', 'false' );
 		} else {
-			container.className += ' toggled';
+			container.className += ' is-toggled';
 			button.setAttribute( 'aria-expanded', 'true' );
 			menu.setAttribute( 'aria-expanded', 'true' );
 		}

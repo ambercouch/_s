@@ -1,13 +1,19 @@
 .menu{
   @extend %nav;
-  @extend %nav--stacked;
   padding: 0;
 }
 
 .menu--main{
-  @extend %nav;
-  @extend %nav--block;
-  padding: 0;
+  @extend .menu;
+  @extend %nav--stacked;
+  @extend %menu--responsive-expand;
+
+}
+.menu__item{
+  margin-bottom: $inuit-base-spacing-unit--small / 2;
+  a {
+    padding: 0.5em;
+  }
 }
 
 .menu--head{

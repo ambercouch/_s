@@ -1,0 +1,8 @@
+%menu--responsive-expand {
+  max-height: 0;
+  overflow: hidden;
+  clear: both;
+  .is-toggled & {
+    max-height: 40em;
+  }
+}
