@@ -87,5 +87,13 @@ a.textwidget--call-now__tel{
     text-shadow: 1px 1px 0 rgba(#fff, 0.2);
     @include inuit-font-size(19px);
   }
+  .contact__icon{
+    width: 16px;
+    height: 16px;
+    fill:#fff;
+  }
+  a{
+    color: #fff;
+  }
 }
 

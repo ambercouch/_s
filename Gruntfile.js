@@ -12,7 +12,7 @@ module.exports = function (grunt) {
         }
       },
       svg: {
-        files: 'assets/images/svg/*.svg',
+        files: 'assets/images/svg/**/*.svg',
         tasks: ['svgstore']
       },
         js: {
@@ -54,12 +54,12 @@ module.exports = function (grunt) {
 
               processors: [
                  // require('pixrem')(), // add fallbacks for rem units
-                  require('autoprefixer-core')({browsers: 'ios'}) // add vendor prefixes
+                  require('autoprefixer-core')({browsers: 'last 2 versions'}) // add vendor prefixes
                   //require('cssnano')() // minify the result
               ]
           },
           dist: {
-              src: 'assets/css/*.css'
+              src: 'style.css'
           }
       },
     concat: {
