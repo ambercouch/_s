@@ -5,8 +5,8 @@
 
 .menu--main{
   @extend .menu;
-  @extend %nav--stacked;
-  @extend %menu--responsive-expand;
+  @extend %portable-nav--stacked;
+  @extend .portable-menu--responsive-expand;
 
 }
 .menu__item{

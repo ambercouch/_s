@@ -1,0 +1,26 @@
+@each $breakpoint in $breakpoints {
+
+  $alias:     nth($breakpoint, 1);
+  $condition: nth($breakpoint, 2);
+
+  // This isn’t ideal, but we definitely don’t want to generate widths
+  // for retina devices. Exclude retina media-qeuries manually.
+  @if ($alias != retina) {
+
+    @include media-query($alias) {
+
+      .#{$alias}-menu--responsive-expand,
+      %#{$alias}-menu--responsive-expand{
+        max-height: 0;
+        overflow: hidden;
+        clear: both;
+        .is-toggled & {
+          max-height: 40em;
+        }
+      }
+
+    } // Close media query.
+
+  } // Close retina check.
+
+} // Close breakpoints loop.
