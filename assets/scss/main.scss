@@ -3,9 +3,11 @@
     Created on : 29-Jan-2015, 21:54:36
     Author     : Richard
 */
+
 @import "../vendor/inuit-defaults/settings.defaults";
 @import "var/settings.defaults";
 
+@import "var/settings.shadows";
 @import "var/settings.colours";
 @import "../vendor/inuit-responsive-settings/settings.responsive";
 @import "var/settings.responsive";
@@ -41,6 +43,7 @@
 @import "ui/modules/placeholders/responsive-toggle";
 @import "ui/modules/placeholders/menu--responsive-expand";
 @import "ui/modules/placeholders/nav";
+@import "ui/modules/placeholders/nav-break-points";
 @import "ui/modules/site";
 @import "ui/modules/master-header";
 @import "ui/modules/navigation";
@@ -54,6 +57,7 @@
 @import "ui/modules/widget";
 @import "ui/modules/sidebar";
 @import "ui/modules/branding";
+@import "ui/modules/search-form";
 @import "ui/accessibility";
 
 
@@ -67,4 +71,6 @@
 @import "../vendor/inuit-widths/trumps.widths";
 @import "../vendor/inuit-widths-responsive/trumps.widths-responsive";
 @import "../vendor/inuit-spacing/trumps.spacing";
+
+
 
