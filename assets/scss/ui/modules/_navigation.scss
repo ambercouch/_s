@@ -13,6 +13,10 @@ and open the template in the editor.
 .navigation--main__toggle{
   @include menu--icon(false, false);
   float: right;
+  display: none;
+  @include media-query(portable){
+    display: block;
+  }
 }
 .navigation__container--head{
   @extend %layout__item;
