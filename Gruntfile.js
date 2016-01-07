@@ -103,5 +103,6 @@ module.exports = function (grunt) {
 
     // 4. Where we tell Grunt what to do when we type "grunt" into the terminal.
     grunt.registerTask('default', ['browserSync', 'watch']);
+    grunt.registerTask('build', ['sass', 'postcss', 'svgstore', 'uglify']);
 
 };
